@@ -325,7 +325,7 @@
           "headline": "Pilot Assist — for the motorway kilometres when your mind needs to wander.",
           "body": "Pilot Assist holds your lane and your following distance on the motorway. You stay in control, but you're less alone in the task.",
           "match_moods": ["calm", "introspective"],
-          "match_use_cases": ["commute", "long_trip"]
+          "match_use_cases": ["commute", "long_trip", "family"]
         },
         {
           "id": "ex40_interior",
@@ -333,6 +333,27 @@
           "body": "Optional Harman Kardon audio. For the morning podcast, the evening playlist, or simply the Scandinavian quiet.",
           "match_moods": ["calm", "intimate"],
           "match_use_cases": ["commute", "solo", "urban_daily"]
+        },
+        {
+          "id": "ex40_city_safety",
+          "headline": "It sees the pedestrian before you do. Day or night.",
+          "body": "The EX40's intelligent safety system detects vehicles, pedestrians, cyclists and large animals around the clock. It warns first, then autobrakes if you don't react. For your most precious cargo.",
+          "match_moods": ["protective", "calm"],
+          "match_use_cases": ["family", "urban_daily", "commute"]
+        },
+        {
+          "id": "ex40_child_locks",
+          "headline": "ISOFIX. Power child lock. The details that matter.",
+          "body": "ISOFIX anchorages for child seats are standard. The rear doors and rear windows lock from the driver's seat — no reaching back, no interruption. A family-friendly SUV, thought through properly.",
+          "match_moods": ["protective", "calm"],
+          "match_use_cases": ["family", "urban_daily"]
+        },
+        {
+          "id": "ex40_thor_headlights",
+          "headline": "Thor's Hammer headlights — they follow the road so you don't have to guess.",
+          "body": "The EX40's LED headlights turn with the steering wheel, illuminating bends and junctions as you navigate them. Optional Pixel Technology delivers crisp, eye-friendly light for dark winter mornings.",
+          "match_moods": ["protective", "calm"],
+          "match_use_cases": ["family", "commute", "urban_daily"]
         }
       ],
       "affinity": {
@@ -478,6 +499,13 @@
           "body": "As a Recharge PHEV, the XC90 runs up to 50 km on pure electric. The school run, without noise or emissions. Sweden in the summer, without compromise.",
           "match_moods": ["protective", "calm"],
           "match_use_cases": ["family", "long_trip", "commute"]
+        },
+        {
+          "id": "xc90_cargo",
+          "headline": "85.7 cubic feet. A flat floor and no lip to negotiate.",
+          "body": "The XC90 boot opens hands-free with a kick gesture under the rear bumper. The wide, flat floor with no loading lip means the double pram, the ski bags, the entire weekend — it all goes in without negotiation.",
+          "match_moods": ["calm", "protective"],
+          "match_use_cases": ["cargo_hauling", "family", "long_trip"]
         }
       ],
       "affinity": {
