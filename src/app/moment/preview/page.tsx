@@ -54,42 +54,17 @@ export default async function PreviewPage({
   const heroPath = match.hero_asset?.local_path ?? '/assets/cars/ex30_exterior_01.webp';
 
   return (
-    <main className="min-h-screen bg-white">
-      <section
-        className="relative w-full h-[60vh] md:h-[75vh] bg-cover bg-center"
-        style={{ backgroundImage: `url('${heroPath}')` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
-
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 h-full flex flex-col justify-end pb-12 md:pb-16">
-          <p className="text-white/75 text-[11px] uppercase tracking-[0.4em]">
-            Your moment, your Volvo
-          </p>
-          <h1 className="mt-4 text-white text-4xl md:text-6xl font-light leading-[1.05]">
-            Volvo {match.car.display_name}
-          </h1>
-          <p className="mt-2 text-white/60 text-sm font-light">
-            {match.car.price_be?.label}
-            {match.car.price_be?.motorisation && (
-              <span className="ml-2 opacity-70">— {match.car.price_be.motorisation}</span>
-            )}
-          </p>
-        </div>
-      </section>
-
+    <main>
       <ReframeReveal
         poeticLine={reframe?.poetic_line ?? match.reason.headline}
-        reframe={reframe?.reframe ?? ''}
+        reframe={reframe?.reframe ?? match.reason.reason}
         reason={match.reason.reason}
         feature={feature}
         car={match.car}
         profile={profile}
         alternatives={alternatives}
+        heroPath={heroPath}
       />
-
-      <footer className="text-center text-[10px] text-volvo-mute tracking-wide py-8 px-4">
-        Editorial demo. © Volvo Car Corporation. Not affiliated with Volvo Cars.
-      </footer>
     </main>
   );
 }

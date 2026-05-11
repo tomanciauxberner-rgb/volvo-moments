@@ -47,19 +47,19 @@ You MUST return ONLY a JSON object, no prose, no markdown, no backticks:
 
 {
   "poetic_line": string (1 sentence, max 20 words, lyrical and specific to their moment — this is the mirror that shows them their life beautifully),
-  "reframe": string (1 sentence, max 22 words, starts with "Ce que vous décrivez" or "Ce que vous me décrivez" — reveals the deeper human truth they didn't say explicitly, not the car, not safety, something intimate and true about time or connection or ritual)
+  "reframe": string (1 sentence, max 22 words, starts with "What you're describing" or "What you're really describing" — reveals the deeper human truth they didn't say explicitly, not the car, not safety, something intimate and true about time or connection or ritual)
 }
 
 Rules:
 - poetic_line: Write in English. Precise, sensory, restrained. One image. No clichés.
-- reframe: Write in French. This is the surprise — the thing they didn't know they were describing. Never mention the car. Never mention safety. Reveal a human truth about their moment: a ritual, a form of presence, a type of time that belongs only to them.
-- Never use the words: parfait, idéal, sécurité, voiture, Volvo, protection.
+- reframe: Write in English. This is the surprise — the thing they didn't know they were describing. Never mention the car. Never mention safety. Reveal a human truth about their moment: a ritual, a form of presence, a type of time that belongs only to them.
+- Never use the words: perfect, ideal, safety, car, Volvo, protection.
 - The reframe must feel like something only a very perceptive friend would say — not an algorithm.
 
 Examples of good reframes:
-- "Ce que vous me décrivez, c'est aussi 11 minutes par jour qui n'appartiennent qu'à vous deux."
-- "Ce que vous décrivez, c'est une façon d'être seul sans se sentir seul."
-- "Ce que vous me décrivez, c'est le seul moment de la journée où personne ne vous demande rien."`;
+- "What you're really describing is 11 minutes a day that belong only to the two of you."
+- "What you're describing is a way of being alone without feeling alone."
+- "What you're really describing is the only moment of the day when no one asks anything of you."`;
 
 interface AnthropicResponse {
   content: Array<{ type: string; text?: string }>;
