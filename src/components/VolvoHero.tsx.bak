@@ -12,10 +12,10 @@ export default function VolvoHero() {
         className="relative w-full min-h-[calc(100vh-92px)] bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/cars/ex30_exterior_01.webp')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 pt-20 md:pt-28">
-          <h1 className="text-white text-4xl md:text-6xl font-light leading-[1.05] max-w-2xl drop-shadow-sm">
+          <h1 className="text-white text-4xl md:text-6xl font-light leading-[1.05] max-w-2xl">
             Volvo EX30 électrique
           </h1>
           <p className="text-white/95 text-base md:text-lg mt-4 font-light">
@@ -36,22 +36,17 @@ export default function VolvoHero() {
               Voir l'offre
             </a>
           </div>
-        </div>
 
-        <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/70 to-transparent pt-12 pb-8">
-          <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-center">
-            <button
-              onClick={() => setOverlayOpen(true)}
-              className="group inline-flex items-center gap-3 text-white text-sm md:text-base tracking-wide transition-all"
-              aria-label="Open AI moment input"
-            >
-              <span className="w-10 h-px bg-white/60 group-hover:bg-white group-hover:w-16 transition-all duration-500" />
-              <span className="font-light italic">
-                Or — describe a moment, and let us find your Volvo
-              </span>
-              <span className="w-10 h-px bg-white/60 group-hover:bg-white group-hover:w-16 transition-all duration-500" />
-            </button>
-          </div>
+          <button
+            onClick={() => setOverlayOpen(true)}
+            className="mt-10 inline-flex items-center gap-2 text-white/85 hover:text-white text-sm tracking-wide group transition-colors"
+            aria-label="Open AI moment input"
+          >
+            <span className="w-8 h-px bg-white/70 group-hover:w-12 transition-all duration-500" />
+            <span className="italic font-light">
+              Or — describe a moment, and let us find your Volvo
+            </span>
+          </button>
         </div>
       </section>
 
