@@ -20,12 +20,15 @@ function pickBestFeature(
   const useSet = new Set(useCases);
 
   let best: EmotionalFeature | null = null;
-  let bestScore = -1;
+  let bestScore = -Infinity;
 
   for (const feat of car.emotional_features) {
     const moodHits = feat.match_moods.filter((m) => moodSet.has(m)).length;
     const useHits = feat.match_use_cases.filter((u) => useSet.has(u)).length;
-    const score = moodHits * 2 + useHits;
+    const precisionBonus = feat.match_use_cases.every((u) => useSet.has(u)) ? 2 : 0;
+    const useMisses = feat.match_use_cases.filter((u) => !useSet.has(u)).length;
+    const mismatchPenalty = useMisses * 1.5;
+    const score = moodHits * 2 + useHits + precisionBonus - mismatchPenalty;
     if (score > bestScore) {
       bestScore = score;
       best = feat;
