@@ -1,0 +1,442 @@
+{
+  "version": "0.1.0",
+  "generated_at": "2026-05-11T00:00:00Z",
+  "visuals": [
+    {
+      "id": "ex30_exterior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/ex30_exterior_01.jpg",
+      "source_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/",
+      "car_model": "EX30",
+      "shot": "exterior",
+      "tags": {
+        "seasons": ["spring", "summer", "any"],
+        "times": ["day", "morning"],
+        "environments": ["urban", "suburban"],
+        "moods": ["energetic", "calm"],
+        "use_cases": ["urban_daily", "commute", "solo"],
+        "has_people": false,
+        "dominant_palette": "neutral"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "ex30_interior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/ex30_interior_01.jpg",
+      "source_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/interior-design/",
+      "car_model": "EX30",
+      "shot": "interior",
+      "tags": {
+        "seasons": ["any"],
+        "times": ["any"],
+        "environments": ["urban", "studio"],
+        "moods": ["calm", "intimate"],
+        "use_cases": ["urban_daily", "solo"],
+        "has_people": false,
+        "dominant_palette": "warm"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "ex40_exterior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/ex40_exterior_01.jpg",
+      "source_url": "https://www.volvocars.com/uk/cars/ex40-electric/specifications/",
+      "car_model": "EX40",
+      "shot": "exterior",
+      "tags": {
+        "seasons": ["autumn", "spring", "any"],
+        "times": ["day", "dusk"],
+        "environments": ["suburban", "urban", "highway"],
+        "moods": ["calm", "protective"],
+        "use_cases": ["commute", "family", "urban_daily"],
+        "has_people": false,
+        "dominant_palette": "cool"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "ex40_interior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/ex40_interior_01.jpg",
+      "source_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/interior-design/",
+      "car_model": "EX40",
+      "shot": "interior",
+      "tags": {
+        "seasons": ["any"],
+        "times": ["any"],
+        "environments": ["studio", "urban"],
+        "moods": ["calm", "intimate", "protective"],
+        "use_cases": ["family", "commute"],
+        "has_people": false,
+        "dominant_palette": "warm"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "ex90_exterior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/ex90_exterior_01.jpg",
+      "source_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/",
+      "car_model": "EX90",
+      "shot": "exterior",
+      "tags": {
+        "seasons": ["winter", "autumn", "any"],
+        "times": ["dawn", "dusk", "morning"],
+        "environments": ["nordic", "mountain", "highway", "suburban"],
+        "moods": ["protective", "ceremonial", "calm"],
+        "use_cases": ["family", "long_trip", "weekend_escape"],
+        "has_people": false,
+        "dominant_palette": "cool"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "ex90_interior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/ex90_interior_01.jpg",
+      "source_url": "https://www.volvocars.com/uk/cars/ex90-electric/interior-design/",
+      "car_model": "EX90",
+      "shot": "interior",
+      "tags": {
+        "seasons": ["any"],
+        "times": ["any"],
+        "environments": ["studio"],
+        "moods": ["protective", "ceremonial", "intimate"],
+        "use_cases": ["family", "long_trip"],
+        "has_people": false,
+        "dominant_palette": "warm"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "xc60_exterior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/xc60_exterior_01.jpg",
+      "source_url": "https://www.volvocars.com/fr-be/cars/xc60/",
+      "car_model": "XC60",
+      "shot": "exterior",
+      "tags": {
+        "seasons": ["autumn", "spring", "any"],
+        "times": ["day", "dusk"],
+        "environments": ["suburban", "forest", "highway"],
+        "moods": ["calm", "adventurous", "protective"],
+        "use_cases": ["family", "weekend_escape", "commute"],
+        "has_people": false,
+        "dominant_palette": "neutral"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "xc60_interior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/xc60_interior_01.jpg",
+      "source_url": "https://www.volvocars.com/uk/cars/xc60/interior-design/",
+      "car_model": "XC60",
+      "shot": "interior",
+      "tags": {
+        "seasons": ["any"],
+        "times": ["any"],
+        "environments": ["studio"],
+        "moods": ["calm", "intimate"],
+        "use_cases": ["family", "weekend_escape"],
+        "has_people": false,
+        "dominant_palette": "warm"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "xc90_exterior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/xc90_exterior_01.jpg",
+      "source_url": "https://www.volvocars.com/uk/cars/xc90-hybrid/",
+      "car_model": "XC90",
+      "shot": "exterior",
+      "tags": {
+        "seasons": ["winter", "any"],
+        "times": ["dawn", "dusk", "morning"],
+        "environments": ["nordic", "mountain", "highway", "suburban"],
+        "moods": ["ceremonial", "protective", "calm"],
+        "use_cases": ["family", "long_trip", "cargo_hauling"],
+        "has_people": false,
+        "dominant_palette": "neutral"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "xc90_interior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/xc90_interior_01.jpg",
+      "source_url": "https://www.volvocars.com/uk/cars/xc90/interior-design/",
+      "car_model": "XC90",
+      "shot": "interior",
+      "tags": {
+        "seasons": ["any"],
+        "times": ["any"],
+        "environments": ["studio"],
+        "moods": ["ceremonial", "intimate", "protective"],
+        "use_cases": ["family", "long_trip"],
+        "has_people": false,
+        "dominant_palette": "warm"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "v60_exterior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/v60_exterior_01.jpg",
+      "source_url": "https://www.volvocars.com/uk/cars/v60/specifications/",
+      "car_model": "V60",
+      "shot": "exterior",
+      "tags": {
+        "seasons": ["autumn", "winter", "any"],
+        "times": ["dawn", "day", "dusk"],
+        "environments": ["forest", "mountain", "coastal", "nordic", "highway"],
+        "moods": ["adventurous", "introspective", "calm"],
+        "use_cases": ["weekend_escape", "long_trip", "cargo_hauling"],
+        "has_people": false,
+        "dominant_palette": "cool"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "v60_interior_01",
+      "type": "photo",
+      "local_path": "/assets/cars/v60_interior_01.jpg",
+      "source_url": "https://www.volvocars.com/uk/cars/v60/interior-design/",
+      "car_model": "V60",
+      "shot": "interior",
+      "tags": {
+        "seasons": ["any"],
+        "times": ["any"],
+        "environments": ["studio"],
+        "moods": ["adventurous", "calm", "intimate"],
+        "use_cases": ["weekend_escape", "cargo_hauling"],
+        "has_people": false,
+        "dominant_palette": "neutral"
+      },
+      "duration_sec": null
+    },
+    {
+      "id": "ex90_film_hero",
+      "type": "video",
+      "local_path": "/assets/films/ex90_film_hero.mp4",
+      "source_url": "https://www.youtube.com/watch?v=cQX-QXxwGvA",
+      "car_model": "EX90",
+      "shot": "lifestyle",
+      "tags": {
+        "seasons": ["any"],
+        "times": ["dawn", "dusk"],
+        "environments": ["nordic", "highway"],
+        "moods": ["ceremonial", "protective"],
+        "use_cases": ["family", "long_trip"],
+        "has_people": true,
+        "dominant_palette": "cool"
+      },
+      "duration_sec": 60
+    },
+    {
+      "id": "landing_loop_nordic",
+      "type": "video",
+      "local_path": "/assets/films/landing_loop_nordic.mp4",
+      "source_url": "derived from ex90_film_hero",
+      "car_model": null,
+      "shot": "landscape",
+      "tags": {
+        "seasons": ["winter", "autumn"],
+        "times": ["dawn", "dusk"],
+        "environments": ["nordic", "forest"],
+        "moods": ["calm", "introspective"],
+        "use_cases": ["solo"],
+        "has_people": false,
+        "dominant_palette": "cool"
+      },
+      "duration_sec": 12
+    }
+  ],
+  "catalog": [
+    {
+      "model": "EX30",
+      "type": "city_ev",
+      "display_name": "EX30",
+      "tagline": "Small enough for the city. Quiet enough for the morning.",
+      "affinity": {
+        "seasons": ["spring", "summer", "any"],
+        "environments": ["urban", "suburban"],
+        "moods": ["calm", "energetic"],
+        "use_cases": ["urban_daily", "commute", "solo"],
+        "min_passengers": 1,
+        "max_passengers": 4,
+        "budget_tier": "entry"
+      },
+      "hero_asset_id": "ex30_exterior_01",
+      "detail_asset_ids": ["ex30_interior_01"],
+      "config_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/"
+    },
+    {
+      "model": "EX40",
+      "type": "compact_suv",
+      "display_name": "EX40",
+      "tagline": "The everyday companion that asks for nothing back.",
+      "affinity": {
+        "seasons": ["autumn", "spring", "any"],
+        "environments": ["suburban", "urban", "highway"],
+        "moods": ["calm", "protective"],
+        "use_cases": ["commute", "family", "urban_daily"],
+        "min_passengers": 1,
+        "max_passengers": 5,
+        "budget_tier": "mid"
+      },
+      "hero_asset_id": "ex40_exterior_01",
+      "detail_asset_ids": ["ex40_interior_01"],
+      "config_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/"
+    },
+    {
+      "model": "EX90",
+      "type": "flagship_suv",
+      "display_name": "EX90",
+      "tagline": "Built for the people you protect.",
+      "affinity": {
+        "seasons": ["winter", "autumn", "any"],
+        "environments": ["nordic", "mountain", "highway", "suburban"],
+        "moods": ["protective", "ceremonial", "calm"],
+        "use_cases": ["family", "long_trip", "weekend_escape"],
+        "min_passengers": 4,
+        "max_passengers": 7,
+        "budget_tier": "premium"
+      },
+      "hero_asset_id": "ex90_exterior_01",
+      "detail_asset_ids": ["ex90_interior_01", "ex90_film_hero"],
+      "config_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/"
+    },
+    {
+      "model": "XC60",
+      "type": "hybrid_suv",
+      "display_name": "XC60",
+      "tagline": "The Volvo that knows your weekends by heart.",
+      "affinity": {
+        "seasons": ["autumn", "spring", "any"],
+        "environments": ["suburban", "forest", "highway"],
+        "moods": ["calm", "adventurous", "protective"],
+        "use_cases": ["family", "weekend_escape", "commute"],
+        "min_passengers": 2,
+        "max_passengers": 5,
+        "budget_tier": "mid"
+      },
+      "hero_asset_id": "xc60_exterior_01",
+      "detail_asset_ids": ["xc60_interior_01"],
+      "config_url": "https://www.volvocars.com/fr-be/cars/xc60/"
+    },
+    {
+      "model": "XC90",
+      "type": "flagship_suv",
+      "display_name": "XC90",
+      "tagline": "Some journeys ask for room. And quiet.",
+      "affinity": {
+        "seasons": ["winter", "any"],
+        "environments": ["nordic", "mountain", "highway", "suburban"],
+        "moods": ["ceremonial", "protective", "calm"],
+        "use_cases": ["family", "long_trip", "cargo_hauling"],
+        "min_passengers": 4,
+        "max_passengers": 7,
+        "budget_tier": "premium"
+      },
+      "hero_asset_id": "xc90_exterior_01",
+      "detail_asset_ids": ["xc90_interior_01"],
+      "config_url": "https://www.volvocars.com/fr-be/cars/xc90-hybrid/"
+    },
+    {
+      "model": "V60",
+      "type": "wagon",
+      "display_name": "V60",
+      "tagline": "For the lives that don't end at the road.",
+      "affinity": {
+        "seasons": ["autumn", "winter", "any"],
+        "environments": ["forest", "mountain", "coastal", "nordic", "highway"],
+        "moods": ["adventurous", "introspective", "calm"],
+        "use_cases": ["weekend_escape", "long_trip", "cargo_hauling"],
+        "min_passengers": 1,
+        "max_passengers": 5,
+        "budget_tier": "premium"
+      },
+      "hero_asset_id": "v60_exterior_01",
+      "detail_asset_ids": ["v60_interior_01"],
+      "config_url": "https://www.volvocars.com/fr-be/cars/v60/"
+    }
+  ],
+  "archive": [
+    {
+      "id": "1927_ov4",
+      "year": 1927,
+      "title": "OV4",
+      "one_liner": "The first Volvo. Hand-built for Swedish roads.",
+      "story": "On April 14, 1927, the first Volvo rolled out of Gothenburg. Engineer Gustaf Larson and economist Assar Gabrielsson agreed on one principle: cars are driven by people. The greatest safety value must therefore always be people themselves.",
+      "affinity": {
+        "moods": ["introspective", "ceremonial"],
+        "values": ["heritage", "craft"]
+      },
+      "illustration_hint": "Black and white period photography of the OV4 in front of a wooden Gothenburg workshop, soft grain"
+    },
+    {
+      "id": "1944_laminated_glass",
+      "year": 1944,
+      "title": "Laminated Safety Glass",
+      "one_liner": "The first windshield that refused to shatter.",
+      "story": "While the world was rebuilding, Volvo introduced laminated safety glass as standard on the PV444. A small decision that quietly saved countless faces.",
+      "affinity": {
+        "moods": ["protective", "calm"],
+        "values": ["safety", "humility"]
+      },
+      "illustration_hint": "Close-up of a windshield, muted post-war palette, soft daylight"
+    },
+    {
+      "id": "1959_seatbelt",
+      "year": 1959,
+      "title": "The Three-Point Seatbelt",
+      "one_liner": "An invention Volvo gave to the world.",
+      "story": "Engineer Nils Bohlin designed the three-point seatbelt. Volvo made the patent open. More than a million lives have been saved since. Some inventions are too important to belong to one company.",
+      "affinity": {
+        "moods": ["protective", "ceremonial"],
+        "values": ["safety", "altruism", "responsibility"]
+      },
+      "illustration_hint": "Nils Bohlin portrait next to a clean schematic of the three-point belt, Scandinavian minimalism"
+    },
+    {
+      "id": "1972_environment",
+      "year": 1972,
+      "title": "The Environmental Declaration",
+      "one_liner": "Stockholm, 1972. Volvo took a side.",
+      "story": "At the UN Conference on the Human Environment, Volvo became the first car maker to publicly commit to environmental responsibility. Long before it was marketable.",
+      "affinity": {
+        "moods": ["introspective", "ceremonial"],
+        "values": ["sustainability", "responsibility"]
+      },
+      "illustration_hint": "Vintage Volvo prototype with a Nordic landscape, soft documentary aesthetic"
+    },
+    {
+      "id": "1991_sips",
+      "year": 1991,
+      "title": "Side Impact Protection",
+      "one_liner": "Protecting what no one had thought to protect.",
+      "story": "Volvo introduced the first Side Impact Protection System, building safety into the geometry of the car itself. The world followed.",
+      "affinity": {
+        "moods": ["protective"],
+        "values": ["safety", "engineering"]
+      },
+      "illustration_hint": "Cross-section diagram of a 1991 Volvo 850, technical and elegant"
+    },
+    {
+      "id": "2019_speed_limit",
+      "year": 2019,
+      "title": "180 km/h",
+      "one_liner": "We chose to slow down. On purpose.",
+      "story": "In 2019 Volvo capped every car at 180 km/h. A reminder that what a car can do, and what it should do, are not the same question.",
+      "affinity": {
+        "moods": ["introspective", "ceremonial"],
+        "values": ["safety", "ethics", "restraint"]
+      },
+      "illustration_hint": "A speedometer needle resting calmly below the redline, high contrast minimalism"
+    }
+  ]
+}

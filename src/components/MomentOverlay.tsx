@@ -9,6 +9,8 @@ const PRESETS = [
   'Long summer trips up the coast to Sweden.',
 ];
 
+const STEPS = ['Listening', 'Sensing the moment', 'Choosing your Volvo'];
+
 interface Props {
   onClose: () => void;
 }
@@ -16,6 +18,7 @@ interface Props {
 export default function MomentOverlay({ onClose }: Props) {
   const [value, setValue] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [stepIndex, setStepIndex] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -34,21 +37,40 @@ export default function MomentOverlay({ onClose }: Props) {
       if (clean.length < 5 || submitting) return;
       setSubmitting(true);
       setError(null);
+      setStepIndex(0);
+
       try {
-        const res = await fetch('/api/extract-intent', {
+        const intentRes = await fetch('/api/extract-intent', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text: clean }),
         });
-        if (!res.ok) {
-          const body = await res.json().catch(() => ({}));
-          throw new Error(body.error || 'request_failed');
+        if (!intentRes.ok) {
+          const b = await intentRes.json().catch(() => ({}));
+          throw new Error(b.error || 'intent_failed');
         }
-        const data = await res.json();
-        const encoded = encodeURIComponent(JSON.stringify(data.profile));
-        window.location.href = `/moment/preview?p=${encoded}`;
+        const { profile } = await intentRes.json();
+        setStepIndex(1);
+
+        const matchRes = await fetch('/api/match-car', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ profile }),
+        });
+        if (!matchRes.ok) {
+          const b = await matchRes.json().catch(() => ({}));
+          throw new Error(b.error || 'match_failed');
+        }
+        const matchData = await matchRes.json();
+        setStepIndex(2);
+
+        const payload = encodeURIComponent(
+          JSON.stringify({ profile, match: matchData.match, alternatives: matchData.alternatives }),
+        );
+        window.location.href = `/moment/preview?d=${payload}`;
       } catch (e) {
         setSubmitting(false);
+        setStepIndex(0);
         setError(e instanceof Error ? e.message : 'unknown');
       }
     },
@@ -113,7 +135,11 @@ export default function MomentOverlay({ onClose }: Props) {
                        transition-colors duration-500 disabled:opacity-40"
           />
           <div className="text-xs text-volvo-mute mt-3 tracking-wide h-4">
-            {submitting ? 'Listening…' : error ? `Error: ${error}` : 'Press enter when ready.'}
+            {submitting
+              ? `${STEPS[stepIndex]}…`
+              : error
+              ? `Error: ${error}`
+              : 'Press enter when ready.'}
           </div>
         </div>
 
