@@ -269,22 +269,22 @@
       "emotional_features": [
         {
           "id": "ex30_range",
-          "headline": "350 km sans y penser",
-          "body": "L'EX30 offre jusqu'à 350 km d'autonomie WLTP. Suffisant pour une semaine de trajets urbains sans avoir à chercher une borne.",
+          "headline": "350 km. A full week without looking for a charger.",
+          "body": "The EX30 offers up to 350 km of WLTP range. Enough to get through the week on a single charge, without thinking twice about it.",
           "match_moods": ["energetic", "calm"],
           "match_use_cases": ["urban_daily", "commute", "solo"]
         },
         {
           "id": "ex30_size",
-          "headline": "La taille d'une pensée, l'espace d'une vie",
-          "body": "4,23 m de long — elle se glisse là où les autres hésitent, sans jamais vous faire sentir à l'étroit dedans.",
+          "headline": "The size of a thought. The space of a life.",
+          "body": "At 4.23 m long, it slips through the city where others hesitate — without ever making you feel cramped inside.",
           "match_moods": ["energetic", "calm"],
           "match_use_cases": ["urban_daily", "solo"]
         },
         {
           "id": "ex30_sound",
-          "headline": "Le silence comme point de départ",
-          "body": "100% électrique, zéro bruit de moteur. Vos matins commencent dans un calme que vous n'aviez pas prévu d'apprécier autant.",
+          "headline": "Silence as a starting point.",
+          "body": "Fully electric, zero engine noise. Your mornings begin in a quiet you didn't expect to value this much.",
           "match_moods": ["calm", "introspective"],
           "match_use_cases": ["commute", "solo"]
         }
@@ -315,22 +315,22 @@
       "emotional_features": [
         {
           "id": "ex40_range",
-          "headline": "600 km. Bruxelles–Côte d'Azur sans s'arrêter y penser",
-          "body": "L'EX40 Extended Range atteint jusqu'à 600 km WLTP. Les trajets du quotidien deviennent une formalité. Les week-ends, une vraie liberté.",
+          "headline": "600 km. Brussels to the south of France without a second thought.",
+          "body": "The EX40 Extended Range reaches up to 600 km WLTP. Daily drives become routine. Weekends become something else entirely.",
           "match_moods": ["calm", "adventurous"],
           "match_use_cases": ["commute", "weekend_escape", "long_trip"]
         },
         {
           "id": "ex40_pilot_assist",
-          "headline": "Pilot Assist — pour les kilomètres d'autoroute où l'esprit vagabonde",
-          "body": "Le système Pilot Assist maintient votre trajectoire et votre distance de sécurité sur autoroute. Vous restez aux commandes, mais moins seul dans la tâche.",
+          "headline": "Pilot Assist — for the motorway kilometres when your mind needs to wander.",
+          "body": "Pilot Assist holds your lane and your following distance on the motorway. You stay in control, but you're less alone in the task.",
           "match_moods": ["calm", "introspective"],
           "match_use_cases": ["commute", "long_trip"]
         },
         {
           "id": "ex40_interior",
-          "headline": "Un intérieur conçu pour ce que vous écoutez",
-          "body": "Système audio Harman Kardon en option. Pour les podcasts du matin, les playlists du retour, ou simplement le silence scandinave.",
+          "headline": "An interior built around what you listen to.",
+          "body": "Optional Harman Kardon audio. For the morning podcast, the evening playlist, or simply the Scandinavian quiet.",
           "match_moods": ["calm", "intimate"],
           "match_use_cases": ["commute", "solo", "urban_daily"]
         }
@@ -361,29 +361,29 @@
       "emotional_features": [
         {
           "id": "ex90_lidar",
-          "headline": "Le LiDAR voit à 250 mètres. Vous, vous regardez votre fille",
-          "body": "L'EX90 est le premier Volvo équipé d'un LiDAR Luminar de série. Il cartographie l'environnement en 3D en temps réel — pendant que vous avez une conversation qui compte.",
+          "headline": "The LiDAR sees 250 metres ahead. You're watching your daughter.",
+          "body": "The EX90 is the first Volvo with Luminar LiDAR as standard. It maps the environment in 3D, in real time — while you're having the conversation that matters.",
           "match_moods": ["protective", "calm", "intimate"],
           "match_use_cases": ["family", "commute"]
         },
         {
           "id": "ex90_suspension",
-          "headline": "La suspension s'ajuste 500 fois par seconde",
-          "body": "Le châssis actif de l'EX90 adapte en permanence la hauteur et la rigidité des amortisseurs. Les pavés bruxellois, les routes ardennaises — ils disparaissent de la conversation.",
+          "headline": "The suspension adjusts 500 times per second.",
+          "body": "The EX90's active chassis continuously adapts ride height and damper stiffness. The cobblestones, the Ardennes roads — they simply leave the conversation.",
           "match_moods": ["calm", "protective"],
           "match_use_cases": ["family", "weekend_escape", "long_trip"]
         },
         {
           "id": "ex90_driver_understanding",
-          "headline": "Il surveille la route. Même quand vous ne le faites plus",
-          "body": "Le Driver Understanding System détecte la fatigue et la distraction via capteurs et caméras. Si vous ne réagissez pas à ses alertes, il s'arrête seul et appelle les secours.",
+          "headline": "It watches the road. Even when you no longer do.",
+          "body": "The Driver Understanding System detects fatigue and distraction through sensors and cameras. If you don't respond to its alerts, it stops the car and calls for help.",
           "match_moods": ["protective", "ceremonial"],
           "match_use_cases": ["long_trip", "family"]
         },
         {
           "id": "ex90_7seats",
-          "headline": "7 places — dont 2 que personne n'utilise sauf quand tout le monde est là",
-          "body": "La troisième rangée de l'EX90 accueille confortablement des adultes. Pour les trajets du quotidien ou les vacances où tout le monde monte.",
+          "headline": "7 seats — including 2 that only fill up when everyone is there.",
+          "body": "The EX90's third row comfortably fits adults. For the school run or the holiday where nobody gets left behind.",
           "match_moods": ["protective", "ceremonial"],
           "match_use_cases": ["family", "long_trip"]
         }
@@ -414,22 +414,22 @@
       "emotional_features": [
         {
           "id": "xc60_awd",
-          "headline": "Traction intégrale — pour les routes qui doutent d'elles-mêmes",
-          "body": "Le XC60 AWD répartit le couple entre les quatre roues en temps réel. Les Ardennes en novembre, les chemins forestiers au petit matin — ça passe, toujours.",
+          "headline": "All-wheel drive — for roads that aren't sure of themselves.",
+          "body": "The XC60 AWD distributes torque between all four wheels in real time. The Ardennes in November, the forest track at dawn — it always gets through.",
           "match_moods": ["adventurous", "calm"],
           "match_use_cases": ["weekend_escape", "family"]
         },
         {
           "id": "xc60_pilot_assist",
-          "headline": "Pilot Assist — parce que l'autoroute mérite mieux que votre attention entière",
-          "body": "Sur autoroute, le Pilot Assist maintient la trajectoire et la distance. Vous arrivez moins fatigué. C'est aussi simple que ça.",
+          "headline": "Pilot Assist — because the motorway deserves more than your full attention.",
+          "body": "On the motorway, Pilot Assist holds your lane and your distance. You arrive less tired. It's as straightforward as that.",
           "match_moods": ["calm", "introspective"],
           "match_use_cases": ["long_trip", "commute"]
         },
         {
           "id": "xc60_phev",
-          "headline": "Électrique en ville, hybride sur route",
-          "body": "En version rechargeable, le XC60 couvre jusqu'à 70 km en électrique pur — suffisant pour la plupart des trajets quotidiens. La pompe reste pour quand vous en avez vraiment besoin.",
+          "headline": "Electric in the city. Hybrid on the open road.",
+          "body": "As a plug-in hybrid, the XC60 covers up to 70 km on pure electric — enough for most daily drives. The engine is there for when you genuinely need it.",
           "match_moods": ["calm", "protective"],
           "match_use_cases": ["commute", "family", "weekend_escape"]
         }
@@ -460,22 +460,22 @@
       "emotional_features": [
         {
           "id": "xc90_bowers",
-          "headline": "Bowers & Wilkins — 19 haut-parleurs qui comprennent le silence",
-          "body": "Le système audio Bowers & Wilkins du XC90 a été calibré pour la cabine scandinave. Pas pour couvrir le bruit — pour occuper exactement le bon espace.",
+          "headline": "Bowers & Wilkins — 19 speakers that understand silence.",
+          "body": "The XC90's Bowers & Wilkins system was calibrated for the Scandinavian cabin. Not to mask noise — to occupy exactly the right amount of space.",
           "match_moods": ["ceremonial", "intimate", "calm"],
           "match_use_cases": ["long_trip", "family"]
         },
         {
           "id": "xc90_air_suspension",
-          "headline": "Suspension pneumatique — les routes ardennaises n'existent plus",
-          "body": "La suspension pneumatique en option ajuste la hauteur et l'amortissement automatiquement. Ce que vous ressentez à l'intérieur, c'est du calme.",
+          "headline": "Air suspension — the Ardennes roads simply cease to exist.",
+          "body": "The optional air suspension adjusts ride height and damping automatically. What you feel inside is calm.",
           "match_moods": ["ceremonial", "calm", "protective"],
           "match_use_cases": ["long_trip", "weekend_escape", "family"]
         },
         {
           "id": "xc90_phev_range",
-          "headline": "Électrique sur 50 km. Puis plus loin encore",
-          "body": "En Recharge PHEV, le XC90 roule jusqu'à 50 km en électrique pur. Les trajets scolaires, sans bruit, sans émissions. Les vacances en Suède, sans compromis.",
+          "headline": "Electric for 50 km. Then as far as you need.",
+          "body": "As a Recharge PHEV, the XC90 runs up to 50 km on pure electric. The school run, without noise or emissions. Sweden in the summer, without compromise.",
           "match_moods": ["protective", "calm"],
           "match_use_cases": ["family", "long_trip", "commute"]
         }
@@ -506,22 +506,22 @@
       "emotional_features": [
         {
           "id": "v60_cargo",
-          "headline": "529 litres — pour les week-ends qui ne tiennent pas dans une valise",
-          "body": "Le coffre du V60 offre 529 litres, extensibles à 1 441 litres banquette rabattue. Les vélos, le chien, le matériel de ski — tout rentre, sans négocier.",
+          "headline": "529 litres — for the weekends that don't fit in a suitcase.",
+          "body": "The V60 boot offers 529 litres, expandable to 1,441 with the rear seats folded. The bikes, the dog, the ski gear — everything fits, without negotiation.",
           "match_moods": ["adventurous", "calm"],
           "match_use_cases": ["weekend_escape", "cargo_hauling", "long_trip"]
         },
         {
           "id": "v60_pilot_assist",
-          "headline": "Pilot Assist — les longs rubans d'autoroute deviennent pensables",
-          "body": "Sur autoroute, le V60 maintient votre trajectoire et votre distance de sécurité. Vos trajets vers la mer du Nord, vos retours de Suède — moins d'effort, même présence.",
+          "headline": "Pilot Assist — the long motorway stretches become thinkable.",
+          "body": "On the motorway, the V60 holds your lane and your following distance. The drive to the North Sea coast, the return from Sweden — less effort, same presence.",
           "match_moods": ["calm", "introspective"],
           "match_use_cases": ["long_trip", "weekend_escape"]
         },
         {
           "id": "v60_awd",
-          "headline": "Traction intégrale — parce que la météo ne prévient pas",
-          "body": "Le V60 AWD répartit intelligemment la puissance entre les essieux. Les routes mouillées de novembre, les matins givrés — il anticipe ce que vous n'avez pas le temps de calculer.",
+          "headline": "All-wheel drive — because the weather doesn't warn you.",
+          "body": "The V60 AWD distributes power between axles intelligently. Wet November roads, frosted morning tarmac — it anticipates what you don't have time to calculate.",
           "match_moods": ["adventurous", "protective"],
           "match_use_cases": ["weekend_escape", "long_trip"]
         }
