@@ -55,15 +55,15 @@ export default function ReframeReveal({
 
   useEffect(() => {
     if (screen === 'poetic') {
-      crossfadeTo('wait', 2800);
+      crossfadeTo('wait', 5500);
     }
   }, [screen]);
 
   useEffect(() => {
     if (screen === 'wait') {
-      setTimeout(() => setWaitLabelVisible(true), 300);
-      setTimeout(() => setReframeVisible(true), 1800);
-      crossfadeTo('result', 5500);
+      setTimeout(() => setWaitLabelVisible(true), 400);
+      setTimeout(() => setReframeVisible(true), 2400);
+      crossfadeTo('result', 9500);
     }
   }, [screen]);
 
