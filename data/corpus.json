@@ -330,7 +330,7 @@
         {
           "id": "ex40_interior",
           "headline": "An interior built around what you listen to.",
-          "body": "Optional Harman Kardon audio. For the morning podcast, the evening playlist, or simply the Scandinavian quiet.",
+          "body": "Optional Harman Kardon audio. For the morning podcast, the evening playlist, or simply the quiet you didn't know you needed.",
           "match_moods": ["calm", "intimate"],
           "match_use_cases": ["commute", "solo", "urban_daily"]
         },
@@ -482,7 +482,7 @@
         {
           "id": "xc90_bowers",
           "headline": "Bowers & Wilkins — 19 speakers that understand silence.",
-          "body": "The XC90's Bowers & Wilkins system was calibrated for the Scandinavian cabin. Not to mask noise — to occupy exactly the right amount of space.",
+          "body": "The XC90's Bowers & Wilkins system was calibrated for silence. Not to mask noise — to occupy exactly the right amount of space.",
           "match_moods": ["ceremonial", "intimate", "calm"],
           "match_use_cases": ["long_trip", "family"]
         },
@@ -496,7 +496,7 @@
         {
           "id": "xc90_phev_range",
           "headline": "Electric for 50 km. Then as far as you need.",
-          "body": "As a Recharge PHEV, the XC90 runs up to 50 km on pure electric. The school run, without noise or emissions. Sweden in the summer, without compromise.",
+          "body": "As a Recharge PHEV, the XC90 runs up to 50 km on pure electric. The school run, without noise or emissions. the open road, without compromise.",
           "match_moods": ["protective", "calm"],
           "match_use_cases": ["family", "long_trip", "commute"]
         },
