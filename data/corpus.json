@@ -5,7 +5,7 @@
     {
       "id": "ex30_exterior_01",
       "type": "photo",
-      "local_path": "/assets/cars/ex30_exterior_01.jpg",
+      "local_path": "/assets/cars/ex30_exterior_01.webp",
       "source_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/",
       "car_model": "EX30",
       "shot": "exterior",
@@ -23,7 +23,7 @@
     {
       "id": "ex30_interior_01",
       "type": "photo",
-      "local_path": "/assets/cars/ex30_interior_01.jpg",
+      "local_path": "/assets/cars/ex30_interior_01.webp",
       "source_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/interior-design/",
       "car_model": "EX30",
       "shot": "interior",
@@ -41,7 +41,7 @@
     {
       "id": "ex40_exterior_01",
       "type": "photo",
-      "local_path": "/assets/cars/ex40_exterior_01.jpg",
+      "local_path": "/assets/cars/ex40_exterior_01.webp",
       "source_url": "https://www.volvocars.com/uk/cars/ex40-electric/specifications/",
       "car_model": "EX40",
       "shot": "exterior",
@@ -59,7 +59,7 @@
     {
       "id": "ex40_interior_01",
       "type": "photo",
-      "local_path": "/assets/cars/ex40_interior_01.jpg",
+      "local_path": "/assets/cars/ex40_interior_01.webp",
       "source_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/interior-design/",
       "car_model": "EX40",
       "shot": "interior",
@@ -77,7 +77,7 @@
     {
       "id": "ex90_exterior_01",
       "type": "photo",
-      "local_path": "/assets/cars/ex90_exterior_01.jpg",
+      "local_path": "/assets/cars/ex90_exterior_01.webp",
       "source_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/",
       "car_model": "EX90",
       "shot": "exterior",
@@ -95,7 +95,7 @@
     {
       "id": "ex90_interior_01",
       "type": "photo",
-      "local_path": "/assets/cars/ex90_interior_01.jpg",
+      "local_path": "/assets/cars/ex90_interior_01.webp",
       "source_url": "https://www.volvocars.com/uk/cars/ex90-electric/interior-design/",
       "car_model": "EX90",
       "shot": "interior",
@@ -113,7 +113,7 @@
     {
       "id": "xc60_exterior_01",
       "type": "photo",
-      "local_path": "/assets/cars/xc60_exterior_01.jpg",
+      "local_path": "/assets/cars/xc60_exterior_01.webp",
       "source_url": "https://www.volvocars.com/fr-be/cars/xc60/",
       "car_model": "XC60",
       "shot": "exterior",
@@ -131,7 +131,7 @@
     {
       "id": "xc60_interior_01",
       "type": "photo",
-      "local_path": "/assets/cars/xc60_interior_01.jpg",
+      "local_path": "/assets/cars/xc60_interior_01.webp",
       "source_url": "https://www.volvocars.com/uk/cars/xc60/interior-design/",
       "car_model": "XC60",
       "shot": "interior",
@@ -149,7 +149,7 @@
     {
       "id": "xc90_exterior_01",
       "type": "photo",
-      "local_path": "/assets/cars/xc90_exterior_01.jpg",
+      "local_path": "/assets/cars/xc90_exterior_01.webp",
       "source_url": "https://www.volvocars.com/uk/cars/xc90-hybrid/",
       "car_model": "XC90",
       "shot": "exterior",
@@ -167,7 +167,7 @@
     {
       "id": "xc90_interior_01",
       "type": "photo",
-      "local_path": "/assets/cars/xc90_interior_01.jpg",
+      "local_path": "/assets/cars/xc90_interior_01.webp",
       "source_url": "https://www.volvocars.com/uk/cars/xc90/interior-design/",
       "car_model": "XC90",
       "shot": "interior",
@@ -185,7 +185,7 @@
     {
       "id": "v60_exterior_01",
       "type": "photo",
-      "local_path": "/assets/cars/v60_exterior_01.jpg",
+      "local_path": "/assets/cars/v60_exterior_01.webp",
       "source_url": "https://www.volvocars.com/uk/cars/v60/specifications/",
       "car_model": "V60",
       "shot": "exterior",
@@ -203,7 +203,7 @@
     {
       "id": "v60_interior_01",
       "type": "photo",
-      "local_path": "/assets/cars/v60_interior_01.jpg",
+      "local_path": "/assets/cars/v60_interior_01.webp",
       "source_url": "https://www.volvocars.com/uk/cars/v60/interior-design/",
       "car_model": "V60",
       "shot": "interior",
