@@ -43,18 +43,18 @@ export default function ReframeReveal({
     // t=50ms   : phrase 1 entre en fondu
     const t0 = setTimeout(() => setPoeticVisible(true), 50);
     // t=5000ms : phrase 1 sort en fondu
-    const t1 = setTimeout(() => setPoeticVisible(false), 5000);
+    const t1 = setTimeout(() => setPoeticVisible(false), 7000);
     // t=5800ms : "wait…" entre en fondu (après que phrase 1 soit invisible)
-    const t2 = setTimeout(() => setWaitVisible(true), 5800);
+    const t2 = setTimeout(() => setWaitVisible(true), 7500);
     // t=7800ms : phrase 2 entre en fondu avec slide
-    const t3 = setTimeout(() => setReframeVisible(true), 7800);
+    const t3 = setTimeout(() => setReframeVisible(true), 9500);
     // t=13500ms: tout l'écran intro sort en fondu
-    const t4 = setTimeout(() => setIntroVisible(false), 13500);
+    const t4 = setTimeout(() => setIntroVisible(false), 17500);
     // t=14300ms: résultat entre en fondu
     const t5 = setTimeout(() => {
       setPhase('result');
       setResultVisible(true);
-    }, 14300);
+    }, 18200);
 
     return () => {
       [t0, t1, t2, t3, t4, t5].forEach(clearTimeout);
