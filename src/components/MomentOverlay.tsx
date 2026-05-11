@@ -9,7 +9,12 @@ const PRESETS = [
   'Long summer trips up the coast to Sweden.',
 ];
 
-const STEPS = ['Listening', 'Sensing the moment', 'Choosing your Volvo'];
+const STEPS = [
+  'Listening…',
+  'Sensing the moment…',
+  'Finding your Volvo…',
+  'One last thought…',
+];
 
 interface Props {
   onClose: () => void;
@@ -47,7 +52,7 @@ export default function MomentOverlay({ onClose }: Props) {
         });
         if (!intentRes.ok) {
           const b = await intentRes.json().catch(() => ({}));
-          throw new Error(b.error || 'intent_failed');
+          throw new Error((b as { error?: string }).error || 'intent_failed');
         }
         const { profile } = await intentRes.json();
         setStepIndex(1);
@@ -59,13 +64,34 @@ export default function MomentOverlay({ onClose }: Props) {
         });
         if (!matchRes.ok) {
           const b = await matchRes.json().catch(() => ({}));
-          throw new Error(b.error || 'match_failed');
+          throw new Error((b as { error?: string }).error || 'match_failed');
         }
         const matchData = await matchRes.json();
         setStepIndex(2);
 
+        const reframeRes = await fetch('/api/generate-reframe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            profile,
+            car_model: matchData.match.car.model,
+          }),
+        });
+        setStepIndex(3);
+
+        let reframeData = null;
+        if (reframeRes.ok) {
+          reframeData = await reframeRes.json();
+        }
+
         const payload = encodeURIComponent(
-          JSON.stringify({ profile, match: matchData.match, alternatives: matchData.alternatives }),
+          JSON.stringify({
+            profile,
+            match: matchData.match,
+            alternatives: matchData.alternatives,
+            reframe: reframeData?.reframe ?? null,
+            feature: reframeData?.feature ?? null,
+          }),
         );
         window.location.href = `/moment/preview?d=${payload}`;
       } catch (e) {
@@ -74,7 +100,7 @@ export default function MomentOverlay({ onClose }: Props) {
         setError(e instanceof Error ? e.message : 'unknown');
       }
     },
-    [submitting]
+    [submitting],
   );
 
   return (
@@ -134,13 +160,29 @@ export default function MomentOverlay({ onClose }: Props) {
                        placeholder:text-volvo-mute placeholder:font-light
                        transition-colors duration-500 disabled:opacity-40"
           />
+
           <div className="text-xs text-volvo-mute mt-3 tracking-wide h-4">
-            {submitting
-              ? `${STEPS[stepIndex]}…`
-              : error
-              ? `Error: ${error}`
-              : 'Press enter when ready.'}
+            {submitting ? (
+              <span className="animate-pulse">{STEPS[stepIndex]}</span>
+            ) : error ? (
+              `Error: ${error}`
+            ) : (
+              'Press enter when ready.'
+            )}
           </div>
+
+          {submitting && (
+            <div className="mt-6 flex justify-center gap-1.5">
+              {STEPS.map((_, i) => (
+                <span
+                  key={i}
+                  className={`block h-px transition-all duration-700 ${
+                    i <= stepIndex ? 'w-8 bg-volvo-ink' : 'w-4 bg-volvo-line'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
         <div

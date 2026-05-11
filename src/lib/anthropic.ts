@@ -1,4 +1,4 @@
-import type { MomentProfile, CatalogCar } from '@/types/corpus';
+import type { MomentProfile, CatalogCar, EmotionalFeature } from '@/types/corpus';
 
 const INTENT_SYSTEM = `You are an editorial assistant for a premium Scandinavian car brand.
 Given a short phrase describing a moment of life, you extract a structured emotional and contextual profile in JSON.
@@ -40,6 +40,26 @@ Examples of good tone:
 - "The Ardennes know your name now."
 
 Avoid: superlatives, exclamations, technical specs, the words "perfect" / "ideal" / "best".`;
+
+const REFRAME_SYSTEM = `You are a senior editorial copywriter for Volvo Cars. Your role is to reveal the hidden truth inside a moment someone has described.
+
+You MUST return ONLY a JSON object, no prose, no markdown, no backticks:
+
+{
+  "poetic_line": string (1 sentence, max 20 words, lyrical and specific to their moment — this is the mirror that shows them their life beautifully),
+  "reframe": string (1 sentence, max 22 words, starts with "Ce que vous décrivez" or "Ce que vous me décrivez" — reveals the deeper human truth they didn't say explicitly, not the car, not safety, something intimate and true about time or connection or ritual)
+}
+
+Rules:
+- poetic_line: Write in English. Precise, sensory, restrained. One image. No clichés.
+- reframe: Write in French. This is the surprise — the thing they didn't know they were describing. Never mention the car. Never mention safety. Reveal a human truth about their moment: a ritual, a form of presence, a type of time that belongs only to them.
+- Never use the words: parfait, idéal, sécurité, voiture, Volvo, protection.
+- The reframe must feel like something only a very perceptive friend would say — not an algorithm.
+
+Examples of good reframes:
+- "Ce que vous me décrivez, c'est aussi 11 minutes par jour qui n'appartiennent qu'à vous deux."
+- "Ce que vous décrivez, c'est une façon d'être seul sans se sentir seul."
+- "Ce que vous me décrivez, c'est le seul moment de la journée où personne ne vous demande rien."`;
 
 interface AnthropicResponse {
   content: Array<{ type: string; text?: string }>;
@@ -120,5 +140,42 @@ export async function generateMatchReason(
     };
   } catch {
     return { headline: car.tagline, reason: car.tagline };
+  }
+}
+
+export interface ReframeResult {
+  poetic_line: string;
+  reframe: string;
+}
+
+export async function generateReframe(
+  profile: MomentProfile,
+  feature: EmotionalFeature,
+): Promise<ReframeResult> {
+  const userContent = JSON.stringify({
+    moment: profile.raw_input,
+    emotional_summary: profile.emotional_summary,
+    season: profile.season,
+    time_of_day: profile.time_of_day,
+    environment: profile.environment,
+    mood: profile.mood,
+    use_case: profile.use_case,
+    passengers: profile.passengers,
+    values: profile.values_implicit,
+    selected_feature_context: feature.headline,
+  });
+
+  const clean = await callClaude(REFRAME_SYSTEM, userContent, 300);
+  try {
+    const parsed = JSON.parse(clean) as Partial<ReframeResult>;
+    return {
+      poetic_line: (parsed.poetic_line ?? profile.emotional_summary).slice(0, 200),
+      reframe: (parsed.reframe ?? '').slice(0, 300),
+    };
+  } catch {
+    return {
+      poetic_line: profile.emotional_summary,
+      reframe: '',
+    };
   }
 }

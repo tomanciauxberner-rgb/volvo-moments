@@ -44,11 +44,27 @@ export interface VisualAsset {
   duration_sec: number | null;
 }
 
+export interface EmotionalFeature {
+  id: string;
+  headline: string;
+  body: string;
+  match_moods: Mood[];
+  match_use_cases: UseCase[];
+}
+
+export interface PriceBE {
+  from: number;
+  label: string;
+  motorisation: string;
+}
+
 export interface CatalogCar {
   model: CarModel;
   type: CarType;
   display_name: string;
   tagline: string;
+  price_be: PriceBE;
+  emotional_features: EmotionalFeature[];
   affinity: {
     seasons: Season[];
     environments: Environment[];
