@@ -20,7 +20,7 @@ interface Props {
   heroPath: string;
 }
 
-type Screen = 'poetic' | 'wait' | 'result';
+type Phase = 'intro' | 'result';
 
 export default function ReframeReveal({
   poeticLine,
@@ -32,78 +32,72 @@ export default function ReframeReveal({
   alternatives,
   heroPath,
 }: Props) {
-  const [screen, setScreen] = useState<Screen>('poetic');
-  const [screenVisible, setScreenVisible] = useState(false);
-  const [waitLabelVisible, setWaitLabelVisible] = useState(false);
+  const [phase, setPhase] = useState<Phase>('intro');
+  const [poeticVisible, setPoeticVisible] = useState(false);
+  const [waitVisible, setWaitVisible] = useState(false);
   const [reframeVisible, setReframeVisible] = useState(false);
-
-  const crossfadeTo = (next: Screen, holdMs: number) => {
-    setTimeout(() => {
-      setScreenVisible(false);
-      setTimeout(() => {
-        setScreen(next);
-        setWaitLabelVisible(false);
-        setReframeVisible(false);
-        setTimeout(() => setScreenVisible(true), 50);
-      }, 700);
-    }, holdMs);
-  };
+  const [introVisible, setIntroVisible] = useState(true);
+  const [resultVisible, setResultVisible] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setScreenVisible(true), 50);
+    // t=50ms   : phrase 1 entre en fondu
+    const t0 = setTimeout(() => setPoeticVisible(true), 50);
+    // t=5000ms : phrase 1 sort en fondu
+    const t1 = setTimeout(() => setPoeticVisible(false), 5000);
+    // t=5800ms : "wait…" entre en fondu (après que phrase 1 soit invisible)
+    const t2 = setTimeout(() => setWaitVisible(true), 5800);
+    // t=7800ms : phrase 2 entre en fondu avec slide
+    const t3 = setTimeout(() => setReframeVisible(true), 7800);
+    // t=13500ms: tout l'écran intro sort en fondu
+    const t4 = setTimeout(() => setIntroVisible(false), 13500);
+    // t=14300ms: résultat entre en fondu
+    const t5 = setTimeout(() => {
+      setPhase('result');
+      setResultVisible(true);
+    }, 14300);
+
+    return () => {
+      [t0, t1, t2, t3, t4, t5].forEach(clearTimeout);
+    };
   }, []);
 
-  useEffect(() => {
-    if (screen === 'poetic') {
-      crossfadeTo('wait', 5500);
-    }
-  }, [screen]);
-
-  useEffect(() => {
-    if (screen === 'wait') {
-      setTimeout(() => setWaitLabelVisible(true), 400);
-      setTimeout(() => setReframeVisible(true), 2400);
-      crossfadeTo('result', 9500);
-    }
-  }, [screen]);
-
-  if (screen === 'poetic' || screen === 'wait') {
+  if (phase === 'intro') {
     return (
       <div
         className={`fixed inset-0 z-50 bg-white flex flex-col items-center justify-center px-8 text-center transition-opacity duration-700 ${
-          screenVisible ? 'opacity-100' : 'opacity-0'
+          introVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        {screen === 'poetic' && (
-          <p className="text-2xl md:text-4xl font-light italic text-volvo-ink max-w-2xl leading-relaxed">
-            {poeticLine}
-          </p>
-        )}
+        <p
+          className={`text-2xl md:text-4xl font-light italic text-volvo-ink max-w-2xl leading-relaxed transition-opacity duration-1000 absolute ${
+            poeticVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          {poeticLine}
+        </p>
 
-        {screen === 'wait' && (
-          <div className="flex flex-col items-center gap-8">
-            <p
-              className={`text-[11px] uppercase tracking-[0.5em] text-volvo-mute transition-opacity duration-1000 ${
-                waitLabelVisible ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              wait…
-            </p>
-            <p
-              className={`text-2xl md:text-4xl font-light text-volvo-ink max-w-2xl leading-relaxed transition-all duration-1000 ${
-                reframeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
-            >
-              {reframe}
-            </p>
-          </div>
-        )}
+        <div className="flex flex-col items-center gap-8">
+          <p
+            className={`text-[11px] uppercase tracking-[0.5em] text-volvo-mute transition-opacity duration-1000 ${
+              waitVisible ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            wait…
+          </p>
+          <p
+            className={`text-2xl md:text-4xl font-light text-volvo-ink max-w-2xl leading-relaxed transition-all duration-1000 ${
+              reframeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
+            {reframe}
+          </p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className={`transition-opacity duration-700 ${screenVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`transition-opacity duration-700 ${resultVisible ? 'opacity-100' : 'opacity-0'}`}>
       <section
         className="relative w-full h-[60vh] md:h-[75vh] bg-cover bg-center"
         style={{ backgroundImage: `url('${heroPath}')` }}
