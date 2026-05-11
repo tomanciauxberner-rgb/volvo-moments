@@ -49,7 +49,7 @@ export default function ReframeReveal({
       setWaitVisible(true);
       audio.play().catch(() => {});
     }, 7500);
-    const t3 = setTimeout(() => setReframeVisible(true), 9500);
+    const t3 = setTimeout(() => setReframeVisible(true), 8500);
     const t4 = setTimeout(() => setIntroVisible(false), 17500);
     const t5 = setTimeout(() => {
       setPhase('result');
