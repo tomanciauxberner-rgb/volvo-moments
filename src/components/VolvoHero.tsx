@@ -39,18 +39,32 @@ export default function VolvoHero() {
 
           <button
             onClick={() => setOverlayOpen(true)}
-            className="group mt-8 flex flex-col items-start text-left"
+            className="group mt-6 hidden md:flex flex-col items-start text-left"
             aria-label="Open Volvo Moments"
           >
             <span className="text-[11px] uppercase tracking-[0.35em] text-white/70 group-hover:text-white transition-colors">
               Volvo Moments
             </span>
-            <span className="mt-2 text-white text-lg md:text-2xl font-light italic drop-shadow-md">
+            <span className="mt-2 text-white text-2xl font-light italic drop-shadow-md">
               Or — describe a moment, and let us find your Volvo
             </span>
             <span className="mt-3 w-10 h-px bg-white/60 group-hover:w-20 group-hover:bg-white transition-all duration-500" />
           </button>
         </div>
+
+        <button
+          onClick={() => setOverlayOpen(true)}
+          className="md:hidden absolute bottom-16 left-6 right-6 z-20 group flex flex-col items-start text-left"
+          aria-label="Open Volvo Moments"
+        >
+          <span className="text-[11px] uppercase tracking-[0.35em] text-white/70">
+            Volvo Moments
+          </span>
+          <span className="mt-1 text-white text-base font-light italic drop-shadow-md">
+            Or — describe a moment, and let us find your Volvo
+          </span>
+          <span className="mt-2 w-8 h-px bg-white/60 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
+        </button>
 
         <div className="absolute bottom-0 left-0 right-0 z-10 h-24 bg-gradient-to-t from-black/50 to-transparent" />
       </section>
