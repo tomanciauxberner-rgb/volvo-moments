@@ -42,13 +42,13 @@ export default function VolvoHero() {
             className="group mt-8 flex flex-col items-start text-left"
             aria-label="Open Volvo Moments"
           >
-            <span className="text-[10px] uppercase tracking-[0.35em] text-white/50 group-hover:text-white/80 transition-colors">
+            <span className="text-[11px] uppercase tracking-[0.35em] text-white/70 group-hover:text-white transition-colors">
               Volvo Moments
             </span>
-            <span className="mt-1 text-white text-sm md:text-base font-light italic">
+            <span className="mt-2 text-white text-lg md:text-2xl font-light italic drop-shadow-md">
               Or — describe a moment, and let us find your Volvo
             </span>
-            <span className="mt-2 w-8 h-px bg-white/40 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
+            <span className="mt-3 w-10 h-px bg-white/60 group-hover:w-20 group-hover:bg-white transition-all duration-500" />
           </button>
         </div>
 
