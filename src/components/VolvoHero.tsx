@@ -54,7 +54,7 @@ export default function VolvoHero() {
 
         <button
           onClick={() => setOverlayOpen(true)}
-          className="md:hidden absolute bottom-16 left-6 right-6 z-20 group flex flex-col items-start text-left"
+          className="md:hidden absolute bottom-10 left-6 right-6 z-20 group flex flex-col items-start text-left"
           aria-label="Open Volvo Moments"
         >
           <span className="text-[11px] uppercase tracking-[0.35em] text-white/70">
