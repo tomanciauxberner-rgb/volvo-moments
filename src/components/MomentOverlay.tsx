@@ -30,7 +30,16 @@ function unlockAudio() {
   if (typeof window === 'undefined') return;
   const audio = new Audio('/sounds/moment.mp3');
   audio.preload = 'auto';
-  audio.load();
+  audio.volume = 0;
+  const p = audio.play();
+  if (p !== undefined) {
+    p.then(() => {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.volume = 1;
+    }).catch(() => {});
+  }
+  audio.volume = 1;
   window.__volvoAudio = audio;
 }
 
