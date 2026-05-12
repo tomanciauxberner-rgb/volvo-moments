@@ -30,16 +30,8 @@ function unlockAudio() {
   if (typeof window === 'undefined') return;
   const audio = new Audio('/sounds/moment.mp3');
   audio.preload = 'auto';
-  audio.volume = 0;
-  audio.play().then(() => {
-    audio.pause();
-    audio.currentTime = 0;
-    audio.volume = 1;
-    window.__volvoAudio = audio;
-  }).catch(() => {
-    audio.volume = 1;
-    window.__volvoAudio = audio;
-  });
+  audio.load();
+  window.__volvoAudio = audio;
 }
 
 export default function MomentOverlay({ onClose }: Props) {
