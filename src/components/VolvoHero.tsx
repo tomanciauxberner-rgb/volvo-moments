@@ -16,43 +16,58 @@ export default function VolvoHero() {
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 pt-20 md:pt-28">
 
-          <div className="flex flex-row items-baseline justify-between gap-8">
-            <h1 className="text-white text-4xl md:text-6xl font-light leading-[1.05] drop-shadow-sm whitespace-nowrap">
-              Volvo EX30 électrique
-            </h1>
+          <div className="flex flex-row items-start justify-between gap-6">
+
+            <div>
+              <h1 className="text-white text-4xl md:text-6xl font-light leading-[1.05] drop-shadow-sm">
+                Volvo EX30 électrique
+              </h1>
+              <p className="text-white/95 text-base md:text-lg mt-4 font-light">
+                À partir de 299 € / mois HTVA en renting financier.*
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="#"
+                  className="bg-white text-black rounded-full px-6 py-3 text-[15px] hover:bg-white/90 transition-colors"
+                >
+                  La Volvo EX30 électrique
+                </a>
+                <a
+                  href="#"
+                  className="border border-white text-white rounded-full px-6 py-3 text-[15px] hover:bg-white/10 transition-colors"
+                >
+                  Voir l'offre
+                </a>
+              </div>
+            </div>
 
             <button
               onClick={() => setOverlayOpen(true)}
-              className="group flex flex-col items-end text-right flex-shrink-0"
+              className="group hidden md:flex flex-col items-end text-right flex-shrink-0 mt-3"
               aria-label="Open Volvo Moments"
             >
               <span className="text-[10px] uppercase tracking-[0.35em] text-white/50 group-hover:text-white/80 transition-colors">
                 Volvo Moments
               </span>
-              <span className="mt-1 text-white text-sm md:text-base font-light italic leading-snug">
+              <span className="mt-1 text-white text-base font-light italic leading-snug max-w-[280px]">
                 Or — describe a moment, and let us find your Volvo
               </span>
               <span className="mt-2 w-8 h-px bg-white/40 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
             </button>
-          </div>
 
-          <p className="text-white/95 text-base md:text-lg mt-4 font-light">
-            À partir de 299 € / mois HTVA en renting financier.*
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="#"
-              className="bg-white text-black rounded-full px-6 py-3 text-[15px] hover:bg-white/90 transition-colors"
-            >
-              La Volvo EX30 électrique
-            </a>
-            <a
-              href="#"
-              className="border border-white text-white rounded-full px-6 py-3 text-[15px] hover:bg-white/10 transition-colors"
-            >
-              Voir l'offre
-            </a>
           </div>
+        </div>
+
+        <div className="absolute bottom-8 left-0 right-0 z-10 flex justify-center md:hidden">
+          <button
+            onClick={() => setOverlayOpen(true)}
+            className="group inline-flex items-center gap-3 text-white text-sm"
+            aria-label="Open Volvo Moments"
+          >
+            <span className="w-8 h-px bg-white/50 group-hover:w-14 group-hover:bg-white transition-all duration-500" />
+            <span className="font-light italic">Or — describe a moment, and let us find your Volvo</span>
+            <span className="w-8 h-px bg-white/50 group-hover:w-14 group-hover:bg-white transition-all duration-500" />
+          </button>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 z-10 h-24 bg-gradient-to-t from-black/50 to-transparent" />
