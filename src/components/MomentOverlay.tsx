@@ -10,8 +10,8 @@ declare global {
 }
 
 const PRESETS = [
-  'Early winter mornings driving my daughter to school in Brussels.',
-  'Weekend escapes to the Ardennes with two kids and the dog.',
+  'Early winter mornings driving Mia to school in Brussels.',
+  'Weekend escapes to the Ardennes with Théo & Nico and the dog.',
   'Quiet drives home through the city after long workdays.',
   'Long summer trips up the coast to Sweden.',
 ];
