@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 
 declare global {
   interface Window {
@@ -44,6 +45,7 @@ function unlockAudio() {
 }
 
 export default function MomentOverlay({ onClose }: Props) {
+  const router = useRouter();
   const [value, setValue] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [stepIndex, setStepIndex] = useState(0);
@@ -117,7 +119,7 @@ export default function MomentOverlay({ onClose }: Props) {
             feature: reframeData?.feature ?? null,
           }),
         );
-        window.location.href = `/moment/preview?d=${payload}`;
+        router.push(`/moment/preview?d=${payload}`);
       } catch (e) {
         setSubmitting(false);
         setStepIndex(0);
