@@ -3,6 +3,12 @@
 import { useEffect, useState } from 'react';
 import type { MomentProfile, CatalogCar, EmotionalFeature } from '@/types/corpus';
 
+declare global {
+  interface Window {
+    __volvoAudio?: HTMLAudioElement;
+  }
+}
+
 interface Alternative {
   model: string;
   display_name: string;
@@ -40,14 +46,14 @@ export default function ReframeReveal({
   const [resultVisible, setResultVisible] = useState(false);
 
   useEffect(() => {
-    const audio = new Audio('/sounds/moment.mp3');
-    audio.preload = 'auto';
-
     const t0 = setTimeout(() => setPoeticVisible(true), 50);
     const t1 = setTimeout(() => setPoeticVisible(false), 7000);
     const t2 = setTimeout(() => {
       setWaitVisible(true);
-      audio.play().catch(() => {});
+      if (window.__volvoAudio) {
+        window.__volvoAudio.currentTime = 0;
+        window.__volvoAudio.play().catch(() => {});
+      }
     }, 7500);
     const t3 = setTimeout(() => setReframeVisible(true), 8500);
     const t4 = setTimeout(() => setIntroVisible(false), 17500);
@@ -58,26 +64,28 @@ export default function ReframeReveal({
 
     return () => {
       [t0, t1, t2, t3, t4, t5].forEach(clearTimeout);
-      audio.pause();
+      if (window.__volvoAudio) {
+        window.__volvoAudio.pause();
+      }
     };
   }, []);
 
   if (phase === 'intro') {
     return (
       <div
-        className={`fixed inset-0 z-50 bg-white flex flex-col items-center justify-center px-8 text-center transition-opacity duration-700 ${
+        className={`fixed inset-0 z-50 bg-white flex flex-col items-center justify-center px-6 text-center transition-opacity duration-700 ${
           introVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <p
-          className={`text-2xl md:text-4xl font-light italic text-volvo-ink max-w-2xl leading-relaxed transition-opacity duration-1000 absolute ${
+          className={`text-2xl md:text-4xl font-light italic text-volvo-ink max-w-2xl leading-relaxed transition-opacity duration-1000 absolute px-6 ${
             poeticVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
           {poeticLine}
         </p>
 
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-6 md:gap-8">
           <p
             className={`text-[11px] uppercase tracking-[0.5em] text-volvo-mute transition-opacity duration-1000 ${
               waitVisible ? 'opacity-100' : 'opacity-0'
@@ -86,7 +94,7 @@ export default function ReframeReveal({
             wait…
           </p>
           <p
-            className={`text-2xl md:text-4xl font-light text-volvo-ink max-w-2xl leading-relaxed transition-all duration-1000 ${
+            className={`text-xl md:text-4xl font-light text-volvo-ink max-w-xl md:max-w-2xl leading-relaxed transition-all duration-1000 ${
               reframeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
@@ -100,15 +108,15 @@ export default function ReframeReveal({
   return (
     <div className={`transition-opacity duration-700 ${resultVisible ? 'opacity-100' : 'opacity-0'}`}>
       <section
-        className="relative w-full h-[60vh] md:h-[75vh] bg-cover bg-center"
+        className="relative w-full h-[50vh] md:h-[75vh] bg-cover bg-center"
         style={{ backgroundImage: `url('${heroPath}')` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 h-full flex flex-col justify-end pb-12 md:pb-16">
-          <p className="text-white/75 text-[11px] uppercase tracking-[0.4em]">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 h-full flex flex-col justify-end pb-8 md:pb-16">
+          <p className="text-white/75 text-[10px] md:text-[11px] uppercase tracking-[0.4em]">
             Your moment, your Volvo
           </p>
-          <h1 className="mt-4 text-white text-4xl md:text-6xl font-light leading-[1.05]">
+          <h1 className="mt-3 text-white text-3xl md:text-6xl font-light leading-[1.05]">
             Volvo {car.display_name}
           </h1>
           <p className="mt-2 text-white/70 text-sm font-light">
@@ -120,41 +128,41 @@ export default function ReframeReveal({
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-24">
+      <section className="max-w-3xl mx-auto px-6 md:px-12 py-12 md:py-24">
         <div className="animate-fadeIn">
           <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
             Why the {car.display_name} for this moment
           </p>
-          <p className="mt-6 text-xl md:text-2xl font-light leading-relaxed text-volvo-ink">
+          <p className="mt-6 text-lg md:text-2xl font-light leading-relaxed text-volvo-ink">
             {reason}
           </p>
         </div>
 
         {feature && (
-          <div className="mt-14 pt-12 border-t border-volvo-line animate-fadeIn">
+          <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
             <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
               What this means for you
             </p>
             <p className="mt-4 text-base font-medium text-volvo-ink leading-snug">
               {feature.headline}
             </p>
-            <p className="mt-3 text-[15px] font-light text-volvo-ink/75 leading-relaxed max-w-xl">
+            <p className="mt-3 text-[15px] font-light text-volvo-ink/75 leading-relaxed">
               {feature.body}
             </p>
           </div>
         )}
 
-        <div className="mt-14 pt-12 border-t border-volvo-line animate-fadeIn">
+        <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
           <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
             The moment you described
           </p>
-          <p className="mt-4 text-lg font-light text-volvo-ink/80 italic">
+          <p className="mt-4 text-base md:text-lg font-light text-volvo-ink/80 italic">
             "{profile.raw_input}"
           </p>
           <p className="mt-2 text-sm text-volvo-mute">
             {profile.emotional_summary}
           </p>
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4 text-sm">
+          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4 text-sm">
             <MetaField label="Season" value={profile.season} />
             <MetaField label="Time" value={profile.time_of_day} />
             <MetaField label="Environment" value={profile.environment} />
@@ -162,25 +170,25 @@ export default function ReframeReveal({
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap gap-3 animate-fadeIn">
+        <div className="mt-10 flex flex-col sm:flex-row gap-3 animate-fadeIn">
           <a
             href={car.config_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-volvo-ink text-white rounded-full px-7 py-3.5 text-[15px] hover:opacity-90 transition-opacity"
+            className="bg-volvo-ink text-white rounded-full px-7 py-3.5 text-[15px] text-center hover:opacity-90 transition-opacity"
           >
             Configure your {car.display_name}
           </a>
           <a
             href="/"
-            className="border border-volvo-ink rounded-full px-7 py-3.5 text-[15px] hover:bg-volvo-ink hover:text-white transition-colors"
+            className="border border-volvo-ink rounded-full px-7 py-3.5 text-[15px] text-center hover:bg-volvo-ink hover:text-white transition-colors"
           >
             Try another moment
           </a>
         </div>
 
         {alternatives.length > 0 && (
-          <div className="mt-14 pt-12 border-t border-volvo-line animate-fadeIn">
+          <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
             <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
               Also considered
             </p>

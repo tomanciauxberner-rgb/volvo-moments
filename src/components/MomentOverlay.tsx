@@ -2,6 +2,12 @@
 
 import { useEffect, useState, useCallback } from 'react';
 
+declare global {
+  interface Window {
+    __volvoAudio?: HTMLAudioElement;
+  }
+}
+
 const PRESETS = [
   'Early winter mornings driving my daughter to school in Brussels.',
   'Weekend escapes to the Ardennes with two kids and the dog.',
@@ -18,6 +24,22 @@ const STEPS = [
 
 interface Props {
   onClose: () => void;
+}
+
+function unlockAudio() {
+  if (typeof window === 'undefined') return;
+  const audio = new Audio('/sounds/moment.mp3');
+  audio.preload = 'auto';
+  audio.volume = 0;
+  audio.play().then(() => {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.volume = 1;
+    window.__volvoAudio = audio;
+  }).catch(() => {
+    audio.volume = 1;
+    window.__volvoAudio = audio;
+  });
 }
 
 export default function MomentOverlay({ onClose }: Props) {
@@ -40,6 +62,7 @@ export default function MomentOverlay({ onClose }: Props) {
     async (text: string) => {
       const clean = text.replace(/[<>]/g, '').trim().slice(0, 280);
       if (clean.length < 5 || submitting) return;
+      unlockAudio();
       setSubmitting(true);
       setError(null);
       setStepIndex(0);
@@ -186,7 +209,7 @@ export default function MomentOverlay({ onClose }: Props) {
         </div>
 
         <div
-          className={`mt-10 flex flex-wrap justify-center gap-2 max-w-3xl transition-all duration-1000 delay-700 ${
+          className={`mt-10 w-full max-w-2xl transition-all duration-1000 delay-700 ${
             mounted ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -198,9 +221,9 @@ export default function MomentOverlay({ onClose }: Props) {
                 submit(p);
               }}
               disabled={submitting}
-              className="text-xs px-4 py-2 rounded-full border border-volvo-line text-volvo-mute
-                         hover:border-volvo-ink hover:text-volvo-ink
-                         transition-colors duration-300 max-w-full disabled:opacity-40"
+              className="block w-full text-left text-sm px-4 py-3 border-b border-volvo-line
+                         text-volvo-mute hover:text-volvo-ink hover:border-volvo-ink
+                         transition-colors duration-300 disabled:opacity-40"
             >
               {p}
             </button>
