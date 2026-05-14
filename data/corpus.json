@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "generated_at": "2026-05-11T00:00:00Z",
+  "version": "0.2.0",
+  "generated_at": "2026-05-12T00:00:00Z",
   "visuals": [
     {
       "id": "ex30_exterior_01",
@@ -42,7 +42,7 @@
       "id": "ex40_exterior_01",
       "type": "photo",
       "local_path": "/assets/cars/ex40_exterior_01.webp",
-      "source_url": "https://www.volvocars.com/uk/cars/ex40-electric/specifications/",
+      "source_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/",
       "car_model": "EX40",
       "shot": "exterior",
       "tags": {
@@ -96,7 +96,7 @@
       "id": "ex90_interior_01",
       "type": "photo",
       "local_path": "/assets/cars/ex90_interior_01.webp",
-      "source_url": "https://www.volvocars.com/uk/cars/ex90-electric/interior-design/",
+      "source_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/interior-design/",
       "car_model": "EX90",
       "shot": "interior",
       "tags": {
@@ -132,7 +132,7 @@
       "id": "xc60_interior_01",
       "type": "photo",
       "local_path": "/assets/cars/xc60_interior_01.webp",
-      "source_url": "https://www.volvocars.com/uk/cars/xc60/interior-design/",
+      "source_url": "https://www.volvocars.com/fr-be/cars/xc60/interior-design/",
       "car_model": "XC60",
       "shot": "interior",
       "tags": {
@@ -150,7 +150,7 @@
       "id": "xc90_exterior_01",
       "type": "photo",
       "local_path": "/assets/cars/xc90_exterior_01.webp",
-      "source_url": "https://www.volvocars.com/uk/cars/xc90-hybrid/",
+      "source_url": "https://www.volvocars.com/fr-be/cars/xc90-hybrid/",
       "car_model": "XC90",
       "shot": "exterior",
       "tags": {
@@ -168,7 +168,7 @@
       "id": "xc90_interior_01",
       "type": "photo",
       "local_path": "/assets/cars/xc90_interior_01.webp",
-      "source_url": "https://www.volvocars.com/uk/cars/xc90/interior-design/",
+      "source_url": "https://www.volvocars.com/fr-be/cars/xc90/interior-design/",
       "car_model": "XC90",
       "shot": "interior",
       "tags": {
@@ -186,7 +186,7 @@
       "id": "v60_exterior_01",
       "type": "photo",
       "local_path": "/assets/cars/v60_exterior_01.webp",
-      "source_url": "https://www.volvocars.com/uk/cars/v60/specifications/",
+      "source_url": "https://www.volvocars.com/fr-be/cars/v60/",
       "car_model": "V60",
       "shot": "exterior",
       "tags": {
@@ -204,7 +204,7 @@
       "id": "v60_interior_01",
       "type": "photo",
       "local_path": "/assets/cars/v60_interior_01.webp",
-      "source_url": "https://www.volvocars.com/uk/cars/v60/interior-design/",
+      "source_url": "https://www.volvocars.com/fr-be/cars/v60/interior-design/",
       "car_model": "V60",
       "shot": "interior",
       "tags": {
@@ -271,22 +271,108 @@
           "id": "ex30_range",
           "headline": "350 km. A full week without looking for a charger.",
           "body": "The EX30 offers up to 350 km of WLTP range. Enough to get through the week on a single charge, without thinking twice about it.",
+          "emotional_trigger": "Freedom from routine anxiety. The charger disappears from your mental checklist.",
           "match_moods": ["energetic", "calm"],
-          "match_use_cases": ["urban_daily", "commute", "solo"]
+          "match_use_cases": ["urban_daily", "commute", "solo"],
+          "match_values": ["simplicity", "sustainability"]
         },
         {
           "id": "ex30_size",
           "headline": "The size of a thought. The space of a life.",
           "body": "At 4.23 m long, it slips through the city where others hesitate — without ever making you feel cramped inside.",
+          "emotional_trigger": "The city stops being a problem. You move through it like you own it.",
           "match_moods": ["energetic", "calm"],
-          "match_use_cases": ["urban_daily", "solo"]
+          "match_use_cases": ["urban_daily", "solo"],
+          "match_values": ["simplicity", "discretion"]
         },
         {
           "id": "ex30_sound",
           "headline": "Silence as a starting point.",
           "body": "Fully electric, zero engine noise. Your mornings begin in a quiet you didn't expect to value this much.",
+          "emotional_trigger": "The commute becomes the first breath of the day, not an ordeal.",
           "match_moods": ["calm", "introspective"],
-          "match_use_cases": ["commute", "solo"]
+          "match_use_cases": ["commute", "solo"],
+          "match_values": ["mindfulness", "simplicity"]
+        },
+        {
+          "id": "ex30_harman",
+          "headline": "Harman Kardon in 4.23 metres. Sound that doesn't apologise for the size.",
+          "body": "The optional Harman Kardon system fills the EX30's cabin with precision audio. Small car, no compromise on what you listen to on the way in.",
+          "emotional_trigger": "Your playlist, your podcast, your morning ritual — in the best possible sound.",
+          "match_moods": ["energetic", "intimate"],
+          "match_use_cases": ["commute", "solo", "urban_daily"],
+          "match_values": ["craft", "pleasure"]
+        },
+        {
+          "id": "ex30_google",
+          "headline": "Google built-in. The city answers before you ask.",
+          "body": "Google Maps, Google Assistant and the Play Store run natively. No cable, no mirroring — just the information you need at the moment you need it.",
+          "emotional_trigger": "The car thinks ahead so you don't have to.",
+          "match_moods": ["energetic", "calm"],
+          "match_use_cases": ["urban_daily", "commute"],
+          "match_values": ["efficiency", "simplicity"]
+        },
+        {
+          "id": "ex30_safety",
+          "headline": "The full Volvo safety suite. Nothing removed because of the price.",
+          "body": "City Safety with pedestrian, cyclist and large animal detection. Run-off road protection. ISOFIX as standard. The EX30 is the smallest Volvo — not the most exposed.",
+          "emotional_trigger": "You didn't compromise on safety to get the price you needed.",
+          "match_moods": ["calm", "protective"],
+          "match_use_cases": ["urban_daily", "commute", "family"],
+          "match_values": ["safety", "responsibility"]
+        },
+        {
+          "id": "ex30_colour",
+          "headline": "Cloud Blue. Moss Yellow. Pine Green. A colour is not a detail.",
+          "body": "The EX30 comes in colours that stop people in the street. A Volvo that is unmistakably Volvo — and unmistakably yours.",
+          "emotional_trigger": "You chose something that reflects who you are, not what's safe.",
+          "match_moods": ["energetic", "intimate"],
+          "match_use_cases": ["urban_daily", "solo"],
+          "match_values": ["identity", "craft"]
+        }
+      ],
+      "config_options": [
+        {
+          "id": "ex30_core",
+          "label": "EX30 Core — Single Motor",
+          "description": "272 km WLTP. The essentials done exceptionally well. Harman Kardon optional.",
+          "price_delta_label": "À partir de 36 270 €",
+          "match_moods": ["calm", "energetic"],
+          "match_use_cases": ["urban_daily", "commute"],
+          "match_values": ["simplicity", "sustainability"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/configurator/"
+        },
+        {
+          "id": "ex30_extended",
+          "label": "EX30 Extended Range — Single Motor",
+          "description": "Up to 480 km WLTP. The range that removes every remaining doubt about going electric.",
+          "price_delta_label": "À partir de 40 700 €",
+          "match_moods": ["calm", "introspective"],
+          "match_use_cases": ["commute", "solo", "urban_daily"],
+          "match_values": ["simplicity", "sustainability", "mindfulness"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/configurator/"
+        },
+        {
+          "id": "ex30_twin",
+          "label": "EX30 Twin Motor Performance",
+          "description": "315 kW. 0–100 in 3.6 s. For the mornings when quiet isn't quite enough.",
+          "price_delta_label": "À partir de 46 700 €",
+          "match_moods": ["energetic", "adventurous"],
+          "match_use_cases": ["urban_daily", "solo"],
+          "match_values": ["performance", "identity"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/configurator/"
+        }
+      ],
+      "tensions": [
+        {
+          "type": "electric_vs_range_anxiety",
+          "label": "You want electric, but you're not sure about the range.",
+          "resolution": "The EX30 Extended Range covers 480 km WLTP — that's Brussels to Paris and back on a single charge. Most owners never charge more than twice a week."
+        },
+        {
+          "type": "space_vs_agility",
+          "label": "You wonder if a small car means giving something up.",
+          "resolution": "The EX30 is shorter than a Golf but taller inside. The floating centre console and panoramic roof make it feel larger than it measures."
         }
       ],
       "affinity": {
@@ -300,7 +386,7 @@
       },
       "hero_asset_id": "ex30_exterior_01",
       "detail_asset_ids": ["ex30_interior_01"],
-      "config_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/"
+      "config_url": "https://www.volvocars.com/fr-be/cars/ex30-electric/configurator/"
     },
     {
       "model": "EX40",
@@ -317,43 +403,122 @@
           "id": "ex40_range",
           "headline": "600 km. Brussels to the south of France without a second thought.",
           "body": "The EX40 Extended Range reaches up to 600 km WLTP. Daily drives become routine. Weekends become something else entirely.",
+          "emotional_trigger": "The weekend trip stops being a calculation. You just go.",
           "match_moods": ["calm", "adventurous"],
-          "match_use_cases": ["commute", "weekend_escape", "long_trip"]
+          "match_use_cases": ["commute", "weekend_escape", "long_trip"],
+          "match_values": ["freedom", "sustainability"]
         },
         {
           "id": "ex40_pilot_assist",
           "headline": "Pilot Assist — for the motorway kilometres when your mind needs to wander.",
           "body": "Pilot Assist holds your lane and your following distance on the motorway. You stay in control, but you're less alone in the task.",
+          "emotional_trigger": "The drive becomes thinking time. The motorway gives something back.",
           "match_moods": ["calm", "introspective"],
-          "match_use_cases": ["commute", "long_trip", "family"]
+          "match_use_cases": ["commute", "long_trip", "family"],
+          "match_values": ["safety", "mindfulness"]
         },
         {
-          "id": "ex40_interior",
-          "headline": "An interior built around what you listen to.",
-          "body": "Optional Harman Kardon audio. For the morning podcast, the evening playlist, or simply the quiet you didn't know you needed.",
+          "id": "ex40_harman",
+          "headline": "Harman Kardon. For the morning podcast, the evening playlist.",
+          "body": "Optional Harman Kardon audio with 13 speakers tuned for the EX40 cabin. The commute becomes the best 40 minutes of your day.",
+          "emotional_trigger": "Sound that turns a routine drive into something you look forward to.",
           "match_moods": ["calm", "intimate"],
-          "match_use_cases": ["commute", "solo", "urban_daily"]
+          "match_use_cases": ["commute", "solo", "urban_daily"],
+          "match_values": ["craft", "pleasure"]
         },
         {
           "id": "ex40_city_safety",
           "headline": "It sees the pedestrian before you do. Day or night.",
-          "body": "The EX40's intelligent safety system detects vehicles, pedestrians, cyclists and large animals around the clock. It warns first, then autobrakes if you don't react. For your most precious cargo.",
+          "body": "The EX40's City Safety system detects vehicles, pedestrians, cyclists and large animals around the clock. It warns first, then autobrakes if you don't react.",
+          "emotional_trigger": "You drive with children in the back. The car never stops watching.",
           "match_moods": ["protective", "calm"],
-          "match_use_cases": ["family", "urban_daily", "commute"]
+          "match_use_cases": ["family", "urban_daily", "commute"],
+          "match_values": ["safety", "responsibility"]
         },
         {
-          "id": "ex40_child_locks",
-          "headline": "ISOFIX. Power child lock. The details that matter.",
-          "body": "ISOFIX anchorages for child seats are standard. The rear doors and rear windows lock from the driver's seat — no reaching back, no interruption. A family-friendly SUV, thought through properly.",
+          "id": "ex40_isofix",
+          "headline": "ISOFIX. Power child lock. The details that don't make the brochure but matter every day.",
+          "body": "ISOFIX anchorages for child seats are standard. Rear doors and windows lock from the driver's seat. A family SUV, thought through properly.",
+          "emotional_trigger": "You stop worrying about the back seat. It's handled.",
           "match_moods": ["protective", "calm"],
-          "match_use_cases": ["family", "urban_daily"]
+          "match_use_cases": ["family", "urban_daily"],
+          "match_values": ["safety", "simplicity"]
         },
         {
-          "id": "ex40_thor_headlights",
-          "headline": "Thor's Hammer headlights — they follow the road so you don't have to guess.",
-          "body": "The EX40's LED headlights turn with the steering wheel, illuminating bends and junctions as you navigate them. Optional Pixel Technology delivers crisp, eye-friendly light for dark winter mornings.",
+          "id": "ex40_thor",
+          "headline": "Thor's Hammer headlights — they follow the road into the bend.",
+          "body": "The EX40's LED headlights turn with the steering wheel, illuminating corners as you navigate them. Optional Pixel Technology for crisp, eye-friendly light on dark winter mornings.",
+          "emotional_trigger": "November at 7am stops being something to endure.",
           "match_moods": ["protective", "calm"],
-          "match_use_cases": ["family", "commute", "urban_daily"]
+          "match_use_cases": ["family", "commute", "urban_daily"],
+          "match_values": ["safety", "craft"]
+        },
+        {
+          "id": "ex40_boot",
+          "headline": "419 litres. The pushchair, the weekend bag, and something for the dog.",
+          "body": "The EX40 boot swallows a family's week without negotiation. The flat floor and wide opening mean loading is never a second thought.",
+          "emotional_trigger": "You stop playing Tetris with the boot before every trip.",
+          "match_moods": ["calm", "protective"],
+          "match_use_cases": ["family", "weekend_escape", "cargo_hauling"],
+          "match_values": ["practicality", "simplicity"]
+        },
+        {
+          "id": "ex40_twin_motor",
+          "headline": "Twin Motor AWD. Because Belgium has winters too.",
+          "body": "The EX40 Twin Motor sends torque to all four wheels instantly. Frost, wet leaves, the motorway in January — it reads the road before you feel it change.",
+          "emotional_trigger": "Winter mornings become just mornings again.",
+          "match_moods": ["protective", "adventurous"],
+          "match_use_cases": ["commute", "family", "weekend_escape"],
+          "match_values": ["safety", "confidence"]
+        }
+      ],
+      "config_options": [
+        {
+          "id": "ex40_standard",
+          "label": "EX40 Single Motor — Standard Range",
+          "description": "Up to 400 km WLTP. The daily driver that never asks to be noticed.",
+          "price_delta_label": "À partir de 46 000 €",
+          "match_moods": ["calm", "protective"],
+          "match_use_cases": ["commute", "urban_daily", "family"],
+          "match_values": ["simplicity", "sustainability"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/configurator/"
+        },
+        {
+          "id": "ex40_extended",
+          "label": "EX40 Extended Range + Harman Kardon + Pilot Assist",
+          "description": "600 km WLTP. The configuration for people who think in weekends, not just commutes.",
+          "price_delta_label": "À partir de 52 000 €",
+          "match_moods": ["calm", "adventurous", "introspective"],
+          "match_use_cases": ["commute", "weekend_escape", "long_trip"],
+          "match_values": ["freedom", "craft", "mindfulness"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/configurator/"
+        },
+        {
+          "id": "ex40_twin_family",
+          "label": "EX40 Twin Motor AWD + ISOFIX + Pilot Assist",
+          "description": "AWD traction, full family safety suite. The configuration that removes every parental doubt.",
+          "price_delta_label": "À partir de 56 000 €",
+          "match_moods": ["protective", "calm"],
+          "match_use_cases": ["family", "commute", "weekend_escape"],
+          "match_values": ["safety", "responsibility", "confidence"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/configurator/"
+        }
+      ],
+      "tensions": [
+        {
+          "type": "electric_vs_range_anxiety",
+          "label": "You want to go fully electric but the long trips worry you.",
+          "resolution": "The EX40 Extended Range covers 600 km WLTP. With fast charging at 150 kW, a 10–80% charge takes under 30 minutes on a motorway stop."
+        },
+        {
+          "type": "family_vs_solo_identity",
+          "label": "You need a family car but don't want to feel like you gave up on yourself.",
+          "resolution": "The EX40 drives like a Volvo, not a people-carrier. Harman Kardon, Pilot Assist, and a genuinely beautiful interior — it's a car you'd have chosen anyway."
+        },
+        {
+          "type": "budget_vs_desire",
+          "label": "The EX90 is the dream but the EX40 is the reality.",
+          "resolution": "The EX40 Extended Range gives you 600 km, AWD, Pilot Assist and Harman Kardon. The gap to the EX90 is real — but what you gain at this price is complete."
         }
       ],
       "affinity": {
@@ -367,7 +532,7 @@
       },
       "hero_asset_id": "ex40_exterior_01",
       "detail_asset_ids": ["ex40_interior_01"],
-      "config_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/"
+      "config_url": "https://www.volvocars.com/fr-be/cars/ex40-electric/configurator/"
     },
     {
       "model": "EX90",
@@ -382,31 +547,100 @@
       "emotional_features": [
         {
           "id": "ex90_lidar",
-          "headline": "The LiDAR sees 250 metres ahead. You're watching your daughter.",
+          "headline": "LiDAR sees 250 metres ahead. You're watching your daughter.",
           "body": "The EX90 is the first Volvo with Luminar LiDAR as standard. It maps the environment in 3D, in real time — while you're having the conversation that matters.",
-          "match_moods": ["protective", "calm", "intimate"],
-          "match_use_cases": ["family", "commute"]
-        },
-        {
-          "id": "ex90_suspension",
-          "headline": "The suspension adjusts 500 times per second.",
-          "body": "The EX90's active chassis continuously adapts ride height and damper stiffness. The cobblestones, the Ardennes roads — they simply leave the conversation.",
-          "match_moods": ["calm", "protective"],
-          "match_use_cases": ["family", "weekend_escape", "long_trip"]
+          "emotional_trigger": "The car is present so you can be present. Two attentions, perfectly divided.",
+          "match_moods": ["protective", "intimate"],
+          "match_use_cases": ["family", "commute"],
+          "match_values": ["safety", "presence", "responsibility"]
         },
         {
           "id": "ex90_driver_understanding",
-          "headline": "It watches the road. Even when you no longer do.",
-          "body": "The Driver Understanding System detects fatigue and distraction through sensors and cameras. If you don't respond to its alerts, it stops the car and calls for help.",
+          "headline": "It knows when you're not quite there. Before you do.",
+          "body": "The Driver Understanding System detects fatigue and distraction through cabin sensors. If you don't respond to its alerts, it slows the car and calls for help.",
+          "emotional_trigger": "The long drive home after the late night. Someone is watching out for you.",
           "match_moods": ["protective", "ceremonial"],
-          "match_use_cases": ["long_trip", "family"]
+          "match_use_cases": ["long_trip", "family"],
+          "match_values": ["safety", "responsibility"]
+        },
+        {
+          "id": "ex90_suspension",
+          "headline": "The suspension adapts 500 times per second. The Ardennes simply leave the conversation.",
+          "body": "The EX90's active chassis continuously adjusts damper stiffness. Cobblestones, forest roads, the motorway at 130 — each surface is met with the same calm.",
+          "emotional_trigger": "The journey stops being something to get through. It becomes time you have.",
+          "match_moods": ["calm", "ceremonial"],
+          "match_use_cases": ["family", "long_trip", "weekend_escape"],
+          "match_values": ["comfort", "craft"]
         },
         {
           "id": "ex90_7seats",
-          "headline": "7 seats — including 2 that only fill up when everyone is there.",
-          "body": "The EX90's third row comfortably fits adults. For the school run or the holiday where nobody gets left behind.",
+          "headline": "7 seats. Including two that only fill up when everyone is there.",
+          "body": "The third row comfortably fits adults. For the school run where someone's friend needs a lift, or the holiday where nobody gets left behind.",
+          "emotional_trigger": "The car grows with the moment. Nobody sits out.",
           "match_moods": ["protective", "ceremonial"],
-          "match_use_cases": ["family", "long_trip"]
+          "match_use_cases": ["family", "long_trip"],
+          "match_values": ["generosity", "responsibility"]
+        },
+        {
+          "id": "ex90_bowers",
+          "headline": "Bowers & Wilkins. 25 speakers that know the difference between music and silence.",
+          "body": "The EX90's Bowers & Wilkins system was built to reveal what was recorded, not to impress. Seven amplifiers. Diamond tweeter. Audio calibrated for the specific acoustics of this cabin.",
+          "emotional_trigger": "The drive to the coast. The album that belongs to that road.",
+          "match_moods": ["ceremonial", "intimate", "introspective"],
+          "match_use_cases": ["long_trip", "solo", "family"],
+          "match_values": ["craft", "pleasure"]
+        },
+        {
+          "id": "ex90_range",
+          "headline": "600 km. The only electric SUV that doesn't ask you to plan around it.",
+          "body": "The EX90 Twin Motor Extended Range covers up to 600 km WLTP. Family logistics, the long weekend, the unexpected detour — none of it requires a calculation.",
+          "emotional_trigger": "You stopped thinking about charging. That's the real luxury.",
+          "match_moods": ["calm", "protective"],
+          "match_use_cases": ["family", "long_trip", "weekend_escape"],
+          "match_values": ["freedom", "sustainability"]
+        },
+        {
+          "id": "ex90_v2g",
+          "headline": "Vehicle-to-grid. Your car powers the house on Sunday morning.",
+          "body": "The EX90 can feed energy back to your home. On a weekend morning, the house runs on the car while it sits in the driveway. It is a different relationship with electricity.",
+          "emotional_trigger": "The car becomes part of how the home works. Not just how you move.",
+          "match_moods": ["introspective", "calm"],
+          "match_use_cases": ["family", "urban_daily"],
+          "match_values": ["sustainability", "responsibility", "craft"]
+        }
+      ],
+      "config_options": [
+        {
+          "id": "ex90_twin_standard",
+          "label": "EX90 Twin Motor — Standard Range",
+          "description": "517 km WLTP. 7 seats, LiDAR, Bowers & Wilkins standard. The entry point to the flagship.",
+          "price_delta_label": "À partir de 86 320 €",
+          "match_moods": ["protective", "ceremonial"],
+          "match_use_cases": ["family", "long_trip"],
+          "match_values": ["safety", "responsibility"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/configurator/"
+        },
+        {
+          "id": "ex90_twin_extended",
+          "label": "EX90 Twin Motor Extended Range + Bowers & Wilkins + Air Suspension",
+          "description": "600 km WLTP. The configuration that removes every remaining compromise.",
+          "price_delta_label": "À partir de 99 000 €",
+          "match_moods": ["ceremonial", "calm", "intimate"],
+          "match_use_cases": ["family", "long_trip", "weekend_escape"],
+          "match_values": ["craft", "freedom", "comfort"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/configurator/"
+        }
+      ],
+      "tensions": [
+        {
+          "type": "premium_vs_practicality",
+          "label": "The price is serious. You need to justify it.",
+          "resolution": "The EX90 replaces two anxieties at once: range anxiety and the question of whether your family is as safe as possible on the road. LiDAR, Driver Understanding, 7 seats, 600 km — at this level, the car stops being a cost and becomes a decision you made once."
+        },
+        {
+          "type": "electric_vs_range_anxiety",
+          "label": "Seven seats and fully electric — you wonder if the range holds up.",
+          "resolution": "600 km WLTP in the Extended Range. With 250 kW DC fast charging, you add 150 km in 10 minutes. The only family electric SUV that doesn't require a new mental model."
         }
       ],
       "affinity": {
@@ -420,7 +654,7 @@
       },
       "hero_asset_id": "ex90_exterior_01",
       "detail_asset_ids": ["ex90_interior_01", "ex90_film_hero"],
-      "config_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/"
+      "config_url": "https://www.volvocars.com/fr-be/cars/ex90-electric/configurator/"
     },
     {
       "model": "XC60",
@@ -434,25 +668,111 @@
       },
       "emotional_features": [
         {
+          "id": "xc60_phev_daily",
+          "headline": "Electric for 70 km. Petrol for everything else.",
+          "body": "The XC60 Recharge covers up to 70 km on pure electric — enough for most weeks without touching the combustion engine. On the weekend, the range extends to wherever you decide to go.",
+          "emotional_trigger": "You don't have to choose between conviction and convenience. The XC60 holds both.",
+          "match_moods": ["calm", "protective"],
+          "match_use_cases": ["commute", "family", "weekend_escape"],
+          "match_values": ["sustainability", "freedom", "pragmatism"]
+        },
+        {
           "id": "xc60_awd",
-          "headline": "All-wheel drive — for roads that aren't sure of themselves.",
-          "body": "The XC60 AWD distributes torque between all four wheels in real time. The Ardennes in November, the forest track at dawn — it always gets through.",
-          "match_moods": ["adventurous", "calm"],
-          "match_use_cases": ["weekend_escape", "family"]
+          "headline": "AWD torque vectoring — the road commits to you before you commit to it.",
+          "body": "The XC60 AWD distributes torque between all four wheels in real time. The Ardennes in November, the forest track at dawn — it always finds grip.",
+          "emotional_trigger": "You stop adjusting your plans to the weather. The car adjusts instead.",
+          "match_moods": ["adventurous", "calm", "protective"],
+          "match_use_cases": ["weekend_escape", "family", "long_trip"],
+          "match_values": ["confidence", "freedom"]
         },
         {
           "id": "xc60_pilot_assist",
           "headline": "Pilot Assist — because the motorway deserves more than your full attention.",
-          "body": "On the motorway, Pilot Assist holds your lane and your distance. You arrive less tired. It's as straightforward as that.",
+          "body": "On the motorway, Pilot Assist holds your lane and your distance. You arrive at the chalet less tired than you left Brussels.",
+          "emotional_trigger": "The drive to the mountains becomes part of the holiday, not the prelude to it.",
           "match_moods": ["calm", "introspective"],
-          "match_use_cases": ["long_trip", "commute"]
+          "match_use_cases": ["long_trip", "commute", "weekend_escape"],
+          "match_values": ["safety", "mindfulness"]
         },
         {
-          "id": "xc60_phev",
-          "headline": "Electric in the city. Hybrid on the open road.",
-          "body": "As a plug-in hybrid, the XC60 covers up to 70 km on pure electric — enough for most daily drives. The engine is there for when you genuinely need it.",
+          "id": "xc60_interior_air",
+          "headline": "CleanZone. The cabin air is filtered before anyone notices.",
+          "body": "The XC60's CleanZone system filters particulates and allergens from the cabin air. It starts working before you get in.",
+          "emotional_trigger": "The morning commute stops being something that arrives at your desk with you.",
           "match_moods": ["calm", "protective"],
-          "match_use_cases": ["commute", "family", "weekend_escape"]
+          "match_use_cases": ["commute", "family", "urban_daily"],
+          "match_values": ["health", "safety", "mindfulness"]
+        },
+        {
+          "id": "xc60_google",
+          "headline": "Google built-in. The route is ready before you've buckled in.",
+          "body": "Google Maps runs natively in the XC60 — real-time traffic, parking, charging stops pre-loaded. The car knows where you're going before you've said it.",
+          "emotional_trigger": "The friction of the departure disappears. You just leave.",
+          "match_moods": ["calm", "energetic"],
+          "match_use_cases": ["commute", "weekend_escape", "family"],
+          "match_values": ["efficiency", "simplicity"]
+        },
+        {
+          "id": "xc60_bowers_option",
+          "headline": "Optional Bower & Wilkins. For the drive that deserves a score.",
+          "body": "The XC60's optional Bowers & Wilkins system brings 15 speakers tuned to the cabin. For the route through the Hautes-Fagnes with the windows down and nothing urgent.",
+          "emotional_trigger": "The road becomes the destination. The music is the reason.",
+          "match_moods": ["adventurous", "intimate", "introspective"],
+          "match_use_cases": ["weekend_escape", "long_trip", "solo"],
+          "match_values": ["craft", "pleasure"]
+        },
+        {
+          "id": "xc60_park_assist",
+          "headline": "360° Park Assist Camera. Tight spots in the city, handled.",
+          "body": "The XC60's 360° camera shows every angle simultaneously. The tight space on the Rue Neuve, the underground parking in the dark — it's no longer an event.",
+          "emotional_trigger": "One of the small daily irritations simply stops existing.",
+          "match_moods": ["calm", "protective"],
+          "match_use_cases": ["urban_daily", "commute", "family"],
+          "match_values": ["simplicity", "confidence"]
+        }
+      ],
+      "config_options": [
+        {
+          "id": "xc60_mild",
+          "label": "XC60 B5 Mild Hybrid AWD",
+          "description": "286 hp, AWD, mild-hybrid. The driver's XC60 — responsive, planted, no plug required.",
+          "price_delta_label": "À partir de 56 090 €",
+          "match_moods": ["adventurous", "calm"],
+          "match_use_cases": ["weekend_escape", "commute", "long_trip"],
+          "match_values": ["confidence", "freedom"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/xc60/configurator/"
+        },
+        {
+          "id": "xc60_recharge",
+          "label": "XC60 Recharge PHEV AWD + Pilot Assist + CleanZone",
+          "description": "70 km electric. AWD. The configuration for the person who wants to do the right thing without giving anything up.",
+          "price_delta_label": "À partir de 63 000 €",
+          "match_moods": ["calm", "protective", "introspective"],
+          "match_use_cases": ["commute", "family", "weekend_escape"],
+          "match_values": ["sustainability", "safety", "pragmatism"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/xc60/configurator/"
+        },
+        {
+          "id": "xc60_recharge_bowers",
+          "label": "XC60 Recharge PHEV AWD + Bowers & Wilkins + Pilot Assist",
+          "description": "The weekend-escape configuration. Electric in the city, AWD in the Ardennes, Bowers & Wilkins for everything in between.",
+          "price_delta_label": "À partir de 69 000 €",
+          "match_moods": ["adventurous", "intimate", "calm"],
+          "match_use_cases": ["weekend_escape", "long_trip", "solo"],
+          "match_values": ["craft", "freedom", "pleasure"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/xc60/configurator/"
+        }
+      ],
+      "tensions": [
+        {
+          "type": "adventure_vs_comfort",
+          "label": "You want to go off the beaten path but not sacrifice refinement.",
+          "resolution": "The XC60 AWD was developed on Scandinavian roads in winter. It handles what Belgium and the Ardennes ask of it — without becoming a different car."
+        },
+        {
+          "type": "electric_vs_range_anxiety",
+          "label": "You want to reduce your footprint but you're not ready for full electric.",
+          "resolution": "The XC60 Recharge covers most of your week on pure electric and switches seamlessly to hybrid when you need more. It's the transition that doesn't feel like one."
         }
       ],
       "affinity": {
@@ -466,7 +786,7 @@
       },
       "hero_asset_id": "xc60_exterior_01",
       "detail_asset_ids": ["xc60_interior_01"],
-      "config_url": "https://www.volvocars.com/fr-be/cars/xc60/"
+      "config_url": "https://www.volvocars.com/fr-be/cars/xc60/configurator/"
     },
     {
       "model": "XC90",
@@ -481,31 +801,100 @@
       "emotional_features": [
         {
           "id": "xc90_bowers",
-          "headline": "Bowers & Wilkins — 19 speakers that understand silence.",
-          "body": "The XC90's Bowers & Wilkins system was calibrated for silence. Not to mask noise — to occupy exactly the right amount of space.",
+          "headline": "Bowers & Wilkins. 19 speakers that understand when silence is the right answer.",
+          "body": "The XC90's Bowers & Wilkins system was calibrated for silence as much as sound. Not to mask road noise — to occupy exactly the right amount of space in the cabin.",
+          "emotional_trigger": "The long drive becomes the concert. The family asleep in the back, the road ahead, the music that belongs to that hour.",
           "match_moods": ["ceremonial", "intimate", "calm"],
-          "match_use_cases": ["long_trip", "family"]
+          "match_use_cases": ["long_trip", "family", "solo"],
+          "match_values": ["craft", "pleasure"]
         },
         {
           "id": "xc90_air_suspension",
-          "headline": "Air suspension — the Ardennes roads simply cease to exist.",
-          "body": "The optional air suspension adjusts ride height and damping automatically. What you feel inside is calm.",
+          "headline": "Air suspension — the Ardennes, the motorway, the car park. One ride.",
+          "body": "The optional air suspension adjusts ride height and damping automatically. What you feel inside is always calm. What you see through the window changes — the car does not.",
+          "emotional_trigger": "You stop noticing the road. You notice everything else.",
           "match_moods": ["ceremonial", "calm", "protective"],
-          "match_use_cases": ["long_trip", "weekend_escape", "family"]
+          "match_use_cases": ["long_trip", "weekend_escape", "family"],
+          "match_values": ["comfort", "craft"]
         },
         {
           "id": "xc90_phev_range",
-          "headline": "Electric for 50 km. Then as far as you need.",
-          "body": "As a Recharge PHEV, the XC90 runs up to 50 km on pure electric. The school run, without noise or emissions. the open road, without compromise.",
+          "headline": "Electric for 50 km. Then as far as the family needs.",
+          "body": "The XC90 Recharge runs up to 50 km on pure electric — the school run, the errands, the weekly commute. The combustion engine is there for the weekend, not the routine.",
+          "emotional_trigger": "The routine runs on electricity. The weekends run on possibility.",
           "match_moods": ["protective", "calm"],
-          "match_use_cases": ["family", "long_trip", "commute"]
+          "match_use_cases": ["family", "long_trip", "commute"],
+          "match_values": ["sustainability", "responsibility"]
         },
         {
           "id": "xc90_cargo",
-          "headline": "85.7 cubic feet. A flat floor and no lip to negotiate.",
-          "body": "The XC90 boot opens hands-free with a kick gesture under the rear bumper. The wide, flat floor with no loading lip means the double pram, the ski bags, the entire weekend — it all goes in without negotiation.",
+          "headline": "The boot that never says no.",
+          "body": "The XC90 boot opens hands-free with a kick gesture. Wide, flat, no loading lip. The double pram, the ski bags, the dog, the entire long weekend — it all goes in. Without the conversation.",
+          "emotional_trigger": "You stop mentally allocating the boot before you've packed. It's already solved.",
           "match_moods": ["calm", "protective"],
-          "match_use_cases": ["cargo_hauling", "family", "long_trip"]
+          "match_use_cases": ["cargo_hauling", "family", "long_trip"],
+          "match_values": ["practicality", "simplicity"]
+        },
+        {
+          "id": "xc90_7seats_adult",
+          "headline": "A third row that treats adults as adults.",
+          "body": "The XC90's third row offers genuine headroom and legroom for adults. Not for children who have no choice — for the grandparents, the colleagues, the friends who came along.",
+          "emotional_trigger": "Nobody has to draw the short straw. Everyone arrives the same.",
+          "match_moods": ["ceremonial", "protective"],
+          "match_use_cases": ["family", "long_trip", "cargo_hauling"],
+          "match_values": ["generosity", "comfort"]
+        },
+        {
+          "id": "xc90_pilot_assist",
+          "headline": "Pilot Assist on the long road. Because the drive there is part of the holiday.",
+          "body": "On the motorway, the XC90 holds your lane and distance while you stay attentive. Brussels to the Alps — the car takes some of the distance so you can give more of yourself to the destination.",
+          "emotional_trigger": "You arrive at the chalet having travelled, not having fought.",
+          "match_moods": ["calm", "ceremonial", "introspective"],
+          "match_use_cases": ["long_trip", "family", "weekend_escape"],
+          "match_values": ["safety", "presence"]
+        },
+        {
+          "id": "xc90_inscription",
+          "headline": "Inscription. The interior that justifies the silence outside.",
+          "body": "Nappa leather, open-pore driftwood, crystal gear selector. The XC90 Inscription trim turns the cabin into a reason to linger — not just to arrive.",
+          "emotional_trigger": "You sit in it and understand immediately. This is what it was supposed to feel like.",
+          "match_moods": ["ceremonial", "intimate"],
+          "match_use_cases": ["long_trip", "family", "solo"],
+          "match_values": ["craft", "pleasure", "identity"]
+        }
+      ],
+      "config_options": [
+        {
+          "id": "xc90_recharge_core",
+          "label": "XC90 Recharge T8 AWD — Core",
+          "description": "50 km electric, 7 seats, AWD. The complete family car, before the options.",
+          "price_delta_label": "À partir de 82 090 €",
+          "match_moods": ["protective", "calm"],
+          "match_use_cases": ["family", "commute", "long_trip"],
+          "match_values": ["responsibility", "safety"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/xc90-hybrid/configurator/"
+        },
+        {
+          "id": "xc90_recharge_inscription",
+          "label": "XC90 Recharge Inscription + Air Suspension + Bowers & Wilkins",
+          "description": "The flagship as it was meant to be experienced. Nappa leather, air ride, 19 speakers.",
+          "price_delta_label": "À partir de 96 000 €",
+          "match_moods": ["ceremonial", "intimate", "calm"],
+          "match_use_cases": ["long_trip", "family", "solo"],
+          "match_values": ["craft", "pleasure", "comfort"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/xc90-hybrid/configurator/"
+        }
+      ],
+      "tensions": [
+        {
+          "type": "premium_vs_practicality",
+          "label": "You want the space and presence of an XC90 but wonder if it's excessive.",
+          "resolution": "The XC90 isn't excessive for a family that uses all seven seats. It's the car that grows with the moment — the extra row only exists when you need it, and disappears when you don't."
+        },
+        {
+          "type": "electric_vs_range_anxiety",
+          "label": "You want to move toward electric but seven seats and long trips complicate it.",
+          "resolution": "The XC90 Recharge gives you 50 km of daily electric driving and unlimited hybrid range for the weekends. It's the bridge that doesn't feel like a compromise."
         }
       ],
       "affinity": {
@@ -519,7 +908,7 @@
       },
       "hero_asset_id": "xc90_exterior_01",
       "detail_asset_ids": ["xc90_interior_01"],
-      "config_url": "https://www.volvocars.com/fr-be/cars/xc90-hybrid/"
+      "config_url": "https://www.volvocars.com/fr-be/cars/xc90-hybrid/configurator/"
     },
     {
       "model": "V60",
@@ -535,23 +924,109 @@
         {
           "id": "v60_cargo",
           "headline": "529 litres — for the weekends that don't fit in a suitcase.",
-          "body": "The V60 boot offers 529 litres, expandable to 1,441 with the rear seats folded. The bikes, the dog, the ski gear — everything fits, without negotiation.",
+          "body": "The V60 boot offers 529 litres, expandable to 1,441 with the rear seats folded. The bikes, the dog, the ski gear, the camping kit — everything fits. Without negotiation.",
+          "emotional_trigger": "You stop editing what you take. You take everything you need.",
           "match_moods": ["adventurous", "calm"],
-          "match_use_cases": ["weekend_escape", "cargo_hauling", "long_trip"]
+          "match_use_cases": ["weekend_escape", "cargo_hauling", "long_trip"],
+          "match_values": ["freedom", "practicality"]
         },
         {
           "id": "v60_pilot_assist",
-          "headline": "Pilot Assist — the long motorway stretches become thinkable.",
-          "body": "On the motorway, the V60 holds your lane and your following distance. The drive to the North Sea coast, the long return — less effort, same presence.",
+          "headline": "Pilot Assist — the North Sea is closer than it looks.",
+          "body": "On the motorway, the V60 holds your lane and distance. The drive to the coast, the long return — less effort, same presence. The journey stops being something to endure.",
+          "emotional_trigger": "The long drive becomes time, not distance.",
           "match_moods": ["calm", "introspective"],
-          "match_use_cases": ["long_trip", "weekend_escape"]
+          "match_use_cases": ["long_trip", "weekend_escape", "solo"],
+          "match_values": ["safety", "mindfulness"]
         },
         {
           "id": "v60_awd",
-          "headline": "All-wheel drive — because the weather doesn't warn you.",
-          "body": "The V60 AWD distributes power between axles intelligently. Wet November roads, frosted morning tarmac — it anticipates what you don't have time to calculate.",
+          "headline": "AWD — because the weather doesn't warn you.",
+          "body": "The V60 AWD distributes power between axles intelligently. Wet November roads, frosted morning tarmac, the forest track in October — it anticipates what you don't have time to calculate.",
+          "emotional_trigger": "You leave in any weather. The question stops being whether, and becomes where.",
           "match_moods": ["adventurous", "protective"],
-          "match_use_cases": ["weekend_escape", "long_trip"]
+          "match_use_cases": ["weekend_escape", "long_trip"],
+          "match_values": ["confidence", "freedom"]
+        },
+        {
+          "id": "v60_phev_commute",
+          "headline": "Recharge PHEV. Electric for the week. Free for the weekend.",
+          "body": "The V60 Recharge covers up to 90 km on pure electric. The commute runs silently. On Friday evening, the full hybrid range takes over.",
+          "emotional_trigger": "Monday to Friday on electricity. The weekend on possibility.",
+          "match_moods": ["calm", "introspective", "adventurous"],
+          "match_use_cases": ["commute", "weekend_escape", "long_trip"],
+          "match_values": ["sustainability", "freedom", "pragmatism"]
+        },
+        {
+          "id": "v60_design",
+          "headline": "The Swedish wagon — and proud of it.",
+          "body": "The V60 doesn't apologise for what it is. Clean lines, a low roofline, a stance that doesn't shout. In a world of SUVs, it is the considered choice.",
+          "emotional_trigger": "You chose it because it doesn't need to prove anything. Neither do you.",
+          "match_moods": ["introspective", "adventurous", "calm"],
+          "match_use_cases": ["solo", "weekend_escape", "commute"],
+          "match_values": ["identity", "discretion", "craft"]
+        },
+        {
+          "id": "v60_harman",
+          "headline": "Harman Kardon. The road has a soundtrack now.",
+          "body": "Optional Harman Kardon with 14 speakers tuned for the V60 cabin. For the coastal drive, the early morning motorway, the long way home.",
+          "emotional_trigger": "The route you've driven a hundred times becomes worth taking again.",
+          "match_moods": ["introspective", "adventurous", "intimate"],
+          "match_use_cases": ["long_trip", "weekend_escape", "solo"],
+          "match_values": ["craft", "pleasure"]
+        },
+        {
+          "id": "v60_cross_country",
+          "headline": "Cross Country raised suspension — for the road that isn't on the map.",
+          "body": "The V60 Cross Country sits 75 mm higher, with underbody protection and AWD as standard. It goes where most wagons would turn around.",
+          "emotional_trigger": "The detour becomes the reason you came.",
+          "match_moods": ["adventurous", "introspective"],
+          "match_use_cases": ["weekend_escape", "cargo_hauling", "long_trip"],
+          "match_values": ["freedom", "confidence", "identity"]
+        }
+      ],
+      "config_options": [
+        {
+          "id": "v60_b4_mild",
+          "label": "V60 B4 Mild Hybrid — Core",
+          "description": "197 hp, mild-hybrid efficiency, Pilot Assist standard. The everyday V60.",
+          "price_delta_label": "À partir de 48 810 €",
+          "match_moods": ["calm", "introspective"],
+          "match_use_cases": ["commute", "long_trip", "solo"],
+          "match_values": ["simplicity", "efficiency"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/v60/configurator/"
+        },
+        {
+          "id": "v60_recharge_awd",
+          "label": "V60 Recharge PHEV AWD + Harman Kardon",
+          "description": "Up to 90 km electric, AWD, Harman Kardon. The full week on electricity, the full weekend on sound.",
+          "price_delta_label": "À partir de 59 000 €",
+          "match_moods": ["adventurous", "calm", "introspective"],
+          "match_use_cases": ["commute", "weekend_escape", "long_trip"],
+          "match_values": ["sustainability", "freedom", "craft"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/v60/configurator/"
+        },
+        {
+          "id": "v60_cross_country_awd",
+          "label": "V60 Cross Country B5 AWD",
+          "description": "+75 mm ground clearance, AWD, underbody protection. The wagon that doesn't need a road.",
+          "price_delta_label": "À partir de 57 000 €",
+          "match_moods": ["adventurous", "introspective"],
+          "match_use_cases": ["weekend_escape", "cargo_hauling", "long_trip"],
+          "match_values": ["freedom", "confidence", "identity"],
+          "config_url": "https://www.volvocars.com/fr-be/cars/v60/configurator/"
+        }
+      ],
+      "tensions": [
+        {
+          "type": "space_vs_agility",
+          "label": "You need the boot space but don't want to drive something that feels like a van.",
+          "resolution": "The V60 is 4.76 m long and handles like a car, not a box. The boot is the largest in its class. The two things coexist — this is what Volvo wagons have always been for."
+        },
+        {
+          "type": "family_vs_solo_identity",
+          "label": "It needs to work for the family but this is still your car.",
+          "resolution": "The V60 was never designed as a concession. It's the car people choose when they've thought about it properly. Practical enough for everything, distinctive enough to mean something."
         }
       ],
       "affinity": {
@@ -565,7 +1040,7 @@
       },
       "hero_asset_id": "v60_exterior_01",
       "detail_asset_ids": ["v60_interior_01"],
-      "config_url": "https://www.volvocars.com/fr-be/cars/v60/"
+      "config_url": "https://www.volvocars.com/fr-be/cars/v60/configurator/"
     }
   ],
   "archive": [
@@ -575,10 +1050,7 @@
       "title": "OV4",
       "one_liner": "The first Volvo. Hand-built for Swedish roads.",
       "story": "On April 14, 1927, the first Volvo rolled out of Gothenburg. Engineer Gustaf Larson and economist Assar Gabrielsson agreed on one principle: cars are driven by people. The greatest safety value must therefore always be people themselves.",
-      "affinity": {
-        "moods": ["introspective", "ceremonial"],
-        "values": ["heritage", "craft"]
-      },
+      "affinity": { "moods": ["introspective", "ceremonial"], "values": ["heritage", "craft"] },
       "illustration_hint": "Black and white period photography of the OV4 in front of a wooden Gothenburg workshop, soft grain"
     },
     {
@@ -587,10 +1059,7 @@
       "title": "Laminated Safety Glass",
       "one_liner": "The first windshield that refused to shatter.",
       "story": "While the world was rebuilding, Volvo introduced laminated safety glass as standard on the PV444. A small decision that quietly saved countless faces.",
-      "affinity": {
-        "moods": ["protective", "calm"],
-        "values": ["safety", "humility"]
-      },
+      "affinity": { "moods": ["protective", "calm"], "values": ["safety", "humility"] },
       "illustration_hint": "Close-up of a windshield, muted post-war palette, soft daylight"
     },
     {
@@ -599,10 +1068,7 @@
       "title": "The Three-Point Seatbelt",
       "one_liner": "An invention Volvo gave to the world.",
       "story": "Engineer Nils Bohlin designed the three-point seatbelt. Volvo made the patent open. More than a million lives have been saved since. Some inventions are too important to belong to one company.",
-      "affinity": {
-        "moods": ["protective", "ceremonial"],
-        "values": ["safety", "altruism", "responsibility"]
-      },
+      "affinity": { "moods": ["protective", "ceremonial"], "values": ["safety", "altruism", "responsibility"] },
       "illustration_hint": "Nils Bohlin portrait next to a clean schematic of the three-point belt, Scandinavian minimalism"
     },
     {
@@ -611,10 +1077,7 @@
       "title": "The Environmental Declaration",
       "one_liner": "Stockholm, 1972. Volvo took a side.",
       "story": "At the UN Conference on the Human Environment, Volvo became the first car maker to publicly commit to environmental responsibility. Long before it was marketable.",
-      "affinity": {
-        "moods": ["introspective", "ceremonial"],
-        "values": ["sustainability", "responsibility"]
-      },
+      "affinity": { "moods": ["introspective", "ceremonial"], "values": ["sustainability", "responsibility"] },
       "illustration_hint": "Vintage Volvo prototype with a Nordic landscape, soft documentary aesthetic"
     },
     {
@@ -623,10 +1086,7 @@
       "title": "Side Impact Protection",
       "one_liner": "Protecting what no one had thought to protect.",
       "story": "Volvo introduced the first Side Impact Protection System, building safety into the geometry of the car itself. The world followed.",
-      "affinity": {
-        "moods": ["protective"],
-        "values": ["safety", "engineering"]
-      },
+      "affinity": { "moods": ["protective"], "values": ["safety", "engineering"] },
       "illustration_hint": "Cross-section diagram of a 1991 Volvo 850, technical and elegant"
     },
     {
@@ -635,10 +1095,7 @@
       "title": "180 km/h",
       "one_liner": "We chose to slow down. On purpose.",
       "story": "In 2019 Volvo capped every car at 180 km/h. A reminder that what a car can do, and what it should do, are not the same question.",
-      "affinity": {
-        "moods": ["introspective", "ceremonial"],
-        "values": ["safety", "ethics", "restraint"]
-      },
+      "affinity": { "moods": ["introspective", "ceremonial"], "values": ["safety", "ethics", "restraint"] },
       "illustration_hint": "A speedometer needle resting calmly below the redline, high contrast minimalism"
     }
   ]
