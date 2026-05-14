@@ -1,4 +1,4 @@
-import type { MomentProfile, VisualAsset, CatalogCar, EmotionalFeature } from '@/types/corpus';
+import type { MomentProfile, VisualAsset, CatalogCar, EmotionalFeature, ConfigOption, Tension } from '@/types/corpus';
 import type { MatchReason, ReframeResult } from '@/lib/anthropic';
 import ReframeReveal from '@/components/ReframeReveal';
 
@@ -8,6 +8,8 @@ interface MatchPayload {
   factors: string[];
   hero_asset: VisualAsset | null;
   reason: MatchReason;
+  recommended_config: ConfigOption | null;
+  resolved_tensions: Tension[];
 }
 
 interface Alternative {
@@ -64,6 +66,8 @@ export default async function PreviewPage({
         profile={profile}
         alternatives={alternatives}
         heroPath={heroPath}
+        recommendedConfig={match.recommended_config}
+        resolvedTensions={match.resolved_tensions}
       />
     </main>
   );

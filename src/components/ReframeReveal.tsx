@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import type { MomentProfile, CatalogCar, EmotionalFeature } from '@/types/corpus';
+import type { MomentProfile, CatalogCar, EmotionalFeature, ConfigOption, Tension } from '@/types/corpus';
 
 declare global {
   interface Window {
@@ -24,6 +24,8 @@ interface Props {
   profile: MomentProfile;
   alternatives: Alternative[];
   heroPath: string;
+  recommendedConfig: ConfigOption | null;
+  resolvedTensions: Tension[];
 }
 
 type Phase = 'intro' | 'result';
@@ -37,6 +39,8 @@ export default function ReframeReveal({
   profile,
   alternatives,
   heroPath,
+  recommendedConfig,
+  resolvedTensions,
 }: Props) {
   const [phase, setPhase] = useState<Phase>('intro');
   const [poeticVisible, setPoeticVisible] = useState(false);
@@ -69,6 +73,17 @@ export default function ReframeReveal({
       }
     };
   }, []);
+
+  const otherFeatures = car.emotional_features
+    ? car.emotional_features
+        .filter((f) => f.id !== feature?.id)
+        .filter((f) => {
+          const moodMatch = f.match_moods.some((m) => profile.mood.includes(m));
+          const useMatch = f.match_use_cases.some((u) => profile.use_case.includes(u));
+          return moodMatch || useMatch;
+        })
+        .slice(0, 3)
+    : [];
 
   if (phase === 'intro') {
     return (
@@ -129,6 +144,7 @@ export default function ReframeReveal({
       </section>
 
       <section className="max-w-3xl mx-auto px-6 md:px-12 py-12 md:py-24">
+
         <div className="animate-fadeIn">
           <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
             Why the {car.display_name} for this moment
@@ -149,6 +165,81 @@ export default function ReframeReveal({
             <p className="mt-3 text-[15px] font-light text-volvo-ink/75 leading-relaxed">
               {feature.body}
             </p>
+            {feature.emotional_trigger && (
+              <p className="mt-4 text-[13px] font-light text-volvo-mute italic leading-relaxed border-l-2 border-volvo-line pl-4">
+                {feature.emotional_trigger}
+              </p>
+            )}
+          </div>
+        )}
+
+        {otherFeatures.length > 0 && (
+          <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
+              What else the {car.display_name} brings to this moment
+            </p>
+            <div className="mt-6 space-y-8">
+              {otherFeatures.map((f) => (
+                <div key={f.id}>
+                  <p className="text-base font-medium text-volvo-ink leading-snug">
+                    {f.headline}
+                  </p>
+                  <p className="mt-2 text-[15px] font-light text-volvo-ink/75 leading-relaxed">
+                    {f.body}
+                  </p>
+                  {f.emotional_trigger && (
+                    <p className="mt-3 text-[13px] font-light text-volvo-mute italic leading-relaxed border-l-2 border-volvo-line pl-4">
+                      {f.emotional_trigger}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {recommendedConfig && (
+          <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
+              The configuration for your moment
+            </p>
+            <p className="mt-4 text-base font-medium text-volvo-ink leading-snug">
+              {recommendedConfig.label}
+            </p>
+            <p className="mt-2 text-[15px] font-light text-volvo-ink/75 leading-relaxed">
+              {recommendedConfig.description}
+            </p>
+            <p className="mt-3 text-sm text-volvo-mute">
+              {recommendedConfig.price_delta_label}
+            </p>
+            <a
+              href={recommendedConfig.config_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-block bg-volvo-ink text-white rounded-full px-7 py-3.5 text-[15px] hover:opacity-90 transition-opacity"
+            >
+              Configure this {car.display_name}
+            </a>
+          </div>
+        )}
+
+        {resolvedTensions.length > 0 && (
+          <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
+              What you might be wondering
+            </p>
+            <div className="mt-6 space-y-6">
+              {resolvedTensions.map((t) => (
+                <div key={t.type}>
+                  <p className="text-[13px] font-medium text-volvo-ink/60 italic">
+                    {t.label}
+                  </p>
+                  <p className="mt-2 text-[15px] font-light text-volvo-ink/80 leading-relaxed">
+                    {t.resolution}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
@@ -171,14 +262,16 @@ export default function ReframeReveal({
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3 animate-fadeIn">
-          <a
-            href={car.config_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-volvo-ink text-white rounded-full px-7 py-3.5 text-[15px] text-center hover:opacity-90 transition-opacity"
-          >
-            Configure your {car.display_name}
-          </a>
+          {!recommendedConfig && (
+            <a
+              href={car.config_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-volvo-ink text-white rounded-full px-7 py-3.5 text-[15px] text-center hover:opacity-90 transition-opacity"
+            >
+              Configure your {car.display_name}
+            </a>
+          )}
           <a
             href="/"
             className="border border-volvo-ink rounded-full px-7 py-3.5 text-[15px] text-center hover:bg-volvo-ink hover:text-white transition-colors"

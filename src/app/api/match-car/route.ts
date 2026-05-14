@@ -57,6 +57,8 @@ export async function POST(req: Request) {
       factors: winner.factors,
       hero_asset: heroAsset ?? null,
       reason,
+      recommended_config: winner.recommended_config ?? null,
+      resolved_tensions: winner.resolved_tensions ?? [],
     },
     alternatives: runners_up.map((r) => ({
       model: r.car.model,
