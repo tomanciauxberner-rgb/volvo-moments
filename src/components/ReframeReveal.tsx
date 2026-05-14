@@ -3,6 +3,67 @@
 import { useEffect, useState } from 'react';
 import type { MomentProfile, CatalogCar, EmotionalFeature, ConfigOption, Tension } from '@/types/corpus';
 
+function ExpandableItem({
+  headline,
+  body,
+  trigger,
+}: {
+  headline: string;
+  body: string;
+  trigger?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-volvo-line last:border-0">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-start justify-between gap-4 py-4 text-left group"
+      >
+        <span className="text-[15px] font-medium text-volvo-ink leading-snug group-hover:opacity-70 transition-opacity">
+          {headline}
+        </span>
+        <span className="mt-0.5 shrink-0 text-volvo-mute text-lg leading-none">
+          {open ? '−' : '+'}
+        </span>
+      </button>
+      {open && (
+        <div className="pb-5 space-y-3">
+          <p className="text-[15px] font-light text-volvo-ink/75 leading-relaxed">{body}</p>
+          {trigger && (
+            <p className="text-[13px] font-light text-volvo-mute italic leading-relaxed border-l-2 border-volvo-line pl-4">
+              {trigger}
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ExpandableTension({ label, resolution }: { label: string; resolution: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-volvo-line last:border-0">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-start justify-between gap-4 py-4 text-left group"
+      >
+        <span className="text-[15px] font-light text-volvo-ink/60 italic leading-snug group-hover:opacity-70 transition-opacity">
+          {label}
+        </span>
+        <span className="mt-0.5 shrink-0 text-volvo-mute text-lg leading-none">
+          {open ? '−' : '+'}
+        </span>
+      </button>
+      {open && (
+        <div className="pb-5">
+          <p className="text-[15px] font-light text-volvo-ink/80 leading-relaxed">{resolution}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 declare global {
   interface Window {
     __volvoAudio?: HTMLAudioElement;
@@ -175,24 +236,17 @@ export default function ReframeReveal({
 
         {otherFeatures.length > 0 && (
           <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
-            <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute mb-2">
               What else the {car.display_name} brings to this moment
             </p>
-            <div className="mt-6 space-y-8">
+            <div>
               {otherFeatures.map((f) => (
-                <div key={f.id}>
-                  <p className="text-base font-medium text-volvo-ink leading-snug">
-                    {f.headline}
-                  </p>
-                  <p className="mt-2 text-[15px] font-light text-volvo-ink/75 leading-relaxed">
-                    {f.body}
-                  </p>
-                  {f.emotional_trigger && (
-                    <p className="mt-3 text-[13px] font-light text-volvo-mute italic leading-relaxed border-l-2 border-volvo-line pl-4">
-                      {f.emotional_trigger}
-                    </p>
-                  )}
-                </div>
+                <ExpandableItem
+                  key={f.id}
+                  headline={f.headline}
+                  body={f.body}
+                  trigger={f.emotional_trigger}
+                />
               ))}
             </div>
           </div>
@@ -203,15 +257,12 @@ export default function ReframeReveal({
             <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
               The configuration for your moment
             </p>
-            <p className="mt-4 text-base font-medium text-volvo-ink leading-snug">
-              {recommendedConfig.label}
-            </p>
-            <p className="mt-2 text-[15px] font-light text-volvo-ink/75 leading-relaxed">
-              {recommendedConfig.description}
-            </p>
-            <p className="mt-3 text-sm text-volvo-mute">
-              {recommendedConfig.price_delta_label}
-            </p>
+            <div className="mt-4">
+              <ExpandableItem
+                headline={`${recommendedConfig.label} — ${recommendedConfig.price_delta_label}`}
+                body={recommendedConfig.description}
+              />
+            </div>
             <a
               href={recommendedConfig.config_url}
               target="_blank"
@@ -225,19 +276,16 @@ export default function ReframeReveal({
 
         {resolvedTensions.length > 0 && (
           <div className="mt-12 pt-10 border-t border-volvo-line animate-fadeIn">
-            <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-volvo-mute mb-2">
               What you might be wondering
             </p>
-            <div className="mt-6 space-y-6">
+            <div>
               {resolvedTensions.map((t) => (
-                <div key={t.type}>
-                  <p className="text-[13px] font-medium text-volvo-ink/60 italic">
-                    {t.label}
-                  </p>
-                  <p className="mt-2 text-[15px] font-light text-volvo-ink/80 leading-relaxed">
-                    {t.resolution}
-                  </p>
-                </div>
+                <ExpandableTension
+                  key={t.type}
+                  label={t.label}
+                  resolution={t.resolution}
+                />
               ))}
             </div>
           </div>
