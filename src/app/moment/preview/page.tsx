@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import type { MomentProfile, VisualAsset, CatalogCar, EmotionalFeature, ConfigOption, Tension } from '@/types/corpus';
 import type { MatchReason, ReframeResult } from '@/lib/anthropic';
 import ReframeReveal from '@/components/ReframeReveal';
@@ -26,22 +29,31 @@ interface PageData {
   feature: EmotionalFeature | null;
 }
 
-function safeParse(s: string | undefined): PageData | null {
-  if (!s) return null;
-  try {
-    return JSON.parse(decodeURIComponent(s)) as PageData;
-  } catch {
-    return null;
-  }
-}
+const STORAGE_KEY = 'volvo_moment_payload';
 
-export default async function PreviewPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ d?: string }>;
-}) {
-  const { d } = await searchParams;
-  const data = safeParse(d);
+export default function PreviewPage() {
+  const [data, setData] = useState<PageData | null>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        setData(JSON.parse(raw) as PageData);
+      }
+    } catch {
+      // ignore
+    }
+    setLoaded(true);
+  }, []);
+
+  if (!loaded) {
+    return (
+      <main className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        <p className="text-volvo-mute animate-pulse">Loading your moment…</p>
+      </main>
+    );
+  }
 
   if (!data) {
     return (

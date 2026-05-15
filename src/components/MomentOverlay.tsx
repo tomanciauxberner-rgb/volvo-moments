@@ -23,6 +23,8 @@ const STEPS = [
   'One last thought…',
 ];
 
+const STORAGE_KEY = 'volvo_moment_payload';
+
 interface Props {
   onClose: () => void;
 }
@@ -101,23 +103,28 @@ export default function MomentOverlay({ onClose }: Props) {
           reframeData = await reframeRes.json();
         }
 
-        const payload = encodeURIComponent(
-          JSON.stringify({
-            profile,
-            match: matchData.match,
-            alternatives: matchData.alternatives,
-            reframe: reframeData?.reframe ?? null,
-            feature: reframeData?.feature ?? null,
-          }),
-        );
-        router.push(`/moment/preview?d=${payload}`);
+        const payload = {
+          profile,
+          match: matchData.match,
+          alternatives: matchData.alternatives,
+          reframe: reframeData?.reframe ?? null,
+          feature: reframeData?.feature ?? null,
+        };
+
+        try {
+          sessionStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+        } catch {
+          throw new Error('storage_unavailable');
+        }
+
+        router.push('/moment/preview');
       } catch (e) {
         setSubmitting(false);
         setStepIndex(0);
         setError(e instanceof Error ? e.message : 'unknown');
       }
     },
-    [submitting],
+    [submitting, router],
   );
 
   return (
